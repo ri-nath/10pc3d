@@ -26,8 +26,9 @@ const stars = data.keys().map(index => {
     const radius = data.getSystemDrawRadius(index);
     const color = data.getSystemDrawColor(index);
     const coords = data.getSystemDrawCoordinates(index);
+    const glow = data.getSystemDrawGlowAmnt(index)
 
-    const star = shapes.createStarMesh(radius, color, coords)
+    const star = shapes.createStarMesh(radius, color, coords, glow)
     star.name = index
     scene.add(star)
     return star
@@ -79,12 +80,11 @@ window.addEventListener('click', event => {
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
     // Perform raycasting to determine which objects are intersected by the mouse click
-    const intersects = shapes.multiRaycast(mouse, camera, stars, raycaster);
-
+    const intersects = shapes.multiRaycast(mouse, camera, stars, raycaster)
+                             .map(int => int.object.type == "Sprite" ? int.object.parent : int.object);
     // If there is an intersection, update the selector position and info box content
     if (intersects.length > 0) {
-        const intersectedObject = intersects[0].object;
-        selectObject(intersectedObject)
+        selectObject(intersects[0])
     }
 }, false);
 

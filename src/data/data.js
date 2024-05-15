@@ -101,11 +101,10 @@ export function describeSystem(index) {
 
 export const DEFAULT_INFO = 'Click and drag to rotate.<br>Scroll to zoom.<br><strong>Click</strong> a star for more information.' +
 '<br><br><small>This is a 3D visualization of all the nearby stellar systems within 10 parsecs, or 32.6 light years, of us. The various stars are colored according to their spectral type.' +
-'The sun is located in the middle; it is also always highlighted by an extra yellow circle. Try to find the following:' +
-'<br>- Us! The <strong>Solar System</strong>,' +
-'<br>- The closest stellar system, <strong>Alpha Centauri</strong>, (α Cen)' +
-'<br>- The brightest star in the night sky, <strong>Sirius</strong> (α Canis Majoris A),' +
-'<br>- The closest solitary white dwarf, <strong>van Maanen\'s star</strong> (Wolf 28)' +
+'The sun is located in the middle; it is also always highlighted by an extra yellow circle.' +
+'<br><br>If you\'re lost, try looking for us (the Solar System).' +
+'<br>Also, try clicking on <strong>blue</strong> stars. The blue stars are all very luminous;' +
+'they can all be seen in the night sky, so they may belong to constellations that you\'re familiar with.' +
 '<br><br>Project by Rishi Nath.<br>Source: <a href="https://gruze.org/10pc/resources/">The 10 parsec sample in the Gaia era</a>' +
 '<br>C. Reylé, K. Jardine, P. Fouqué, J. A. Caballero, R. L. Smart, A. Sozzetti' +
 '<br>A&A 650 A201 (2021)' +
@@ -158,6 +157,14 @@ export function getSystemDrawColor(index) {
 export function getSystemDrawRadius(index) {
     const system_type = getSystemType(index)
     return system_type.includes('DWARF') ? 0.025 : 0.04
+}
+
+export function getSystemDrawGlowAmnt(index) {
+    const system_type = getSystemType(index)
+    if (system_type == 'O_B_A') return 1.5
+    if (system_type == 'F_G') return 0.3
+    if (system_type == 'BROWN_DWARF') return 0
+    return 0.2
 }
 
 /**

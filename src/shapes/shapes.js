@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import glow from '../../resources/glow.png'
 
 /**
  * Creates a dashed circle mesh.
@@ -39,14 +40,28 @@ export function createDashedCircleMesh(radius, segments, rotation, color=0xfffff
  * @param {number} [segments=16] - The number of segments used to create the star mesh.
  * @returns {THREE.Mesh} The created star mesh.
  */
-export function createStarMesh(radius, color, coords, segments=16) {
+export function createStarMesh(radius, color, coords, glow_amnt=0, segments=16) {
     const geometry = new THREE.SphereGeometry(radius, segments, segments);
     const material = new THREE.MeshBasicMaterial({ color });
 
-    const star = new THREE.Mesh(geometry, material);
-    star.position.set(...Object.values(coords));
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(...Object.values(coords));
 
-    return star
+
+    // SUPER SIMPLE GLOW EFFECT
+	// use sprite because it appears the same from all angles
+    if (glow_amnt > 0) {
+        var spriteMaterial = new THREE.SpriteMaterial(
+            {
+                map: new THREE.TextureLoader().load(glow),
+                color: color, transparent: true, blending: THREE.AdditiveBlending
+        });
+        var sprite = new THREE.Sprite( spriteMaterial );
+        sprite.scale.set(glow_amnt, glow_amnt, glow_amnt);
+        mesh.add(sprite); // this centers the glow at the mesh
+    }
+
+    return mesh
 }
 
 /**
@@ -80,7 +95,7 @@ export function createSelectorMesh(color=0xfffff, radius=0.2, width=0.02, segmen
  * @param {number} [steps=10] - The number of steps in each direction to generate rays.
  * @returns {Array} An array of intersection results.
  */
-export function multiRaycast(mouse, camera, objects, raycaster, spread = 0.001, steps = 10) {
+export function multiRaycast(mouse, camera, objects, raycaster, spread = 0.001, steps = 3) {
     const intersects = [];
     for (let i = -steps; i <= steps; i++) {
         for (let j = -steps; j <= steps; j++) {

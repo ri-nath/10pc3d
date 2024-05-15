@@ -68,19 +68,28 @@ with open('data/10pc_sample.json', 'w') as fp:
     json.dump(sys_dict, fp)
 
 do_dl_wiki = True
+wiki = {}
 if do_dl_wiki:
-    wiki = {}
-
     for i in sys_dict.keys():
         name = sys_dict[i]['name']
-        print('Getting page ' + name)
-        page_py = wiki_wiki.page(name)
-        if (page_py.exists()):
-            wiki[name] = {
-                'title': page_py.title,
-                'summary': page_py.summary,
-                'links': list(page_py.links.keys())
-            }
+        if name not in wiki:
+            print('Getting page ' + name)
+            page_py = wiki_wiki.page(name
+                                    .replace('alf ', 'Alpha_')
+                                    .replace('bet ', 'Beta_')
+                                    .replace('gam', 'Gamma_')
+                                    .replace('eps ', 'Epsilon_')
+                                    .replace('del', 'Delta_')
+                                    .replace('ksi ', 'Xi_')
+                                    .replace('sig ', 'Sigma_'))
+            if (page_py.exists()):
+                wiki[name] = {
+                    'title': page_py.title,
+                    'summary': page_py.summary,
+                }
+            else:
+                print('Page ' + name + ' did not exist!')
+
 
     with open('data/10pc_wiki.json', 'w') as fp:
         json.dump(wiki, fp)
