@@ -22,10 +22,17 @@ canvas {
 	top: 10px;
 	left: 10px;
 	padding: 10px;
-	background-color: rgba(240, 240, 240, 0.8);
-	border: 1px solid #ccc;
+	background-color: rgba(40, 40, 40, 0.7);
+	border: 1px solid #cccccc52;
+
+	max-width: 40%;
+
+	color: rgba(230, 230, 230, 1);
 	font-family: Arial, sans-serif;
 	text-align: left;
 	text-justify: kashida;
-	max-width: 30%;
+}
+
+#info a {
+	color: #89bcdac7;
 }
