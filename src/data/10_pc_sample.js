@@ -2943,5 +2943,5 @@ export const sample = {
 		z: -9.61800655441706,
 		objs: { 1021: { name: 'CWISEP J023842.60-133210.7', cat: 'BD', spectral_type: '>Y1?', luminosity: 1.1195034190927613e-8 } },
 	},
-	0: { name: 'Solar System', x: 0, y: 0, z: 0, objs: { 1: { name: 'Sol', cat: '*', spectral_type: 'G2', luminosity: 1 } } },
+	0: { name: 'Solar System', x: 0, y: 0, z: 0, objs: { 1: { name: 'The Sun', cat: '*', spectral_type: 'G2', luminosity: 1 } } },
 };

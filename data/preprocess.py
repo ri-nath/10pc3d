@@ -56,7 +56,7 @@ sys_dict['0'] = {
     'z': 0,
     'objs': {
         '1': {
-            'name': 'Sol',
+            'name': 'The Sun',
             'cat': '*',
             'spectral_type': 'G2',
             'luminosity': 1,
