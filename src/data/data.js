@@ -90,7 +90,7 @@ export function describeSystem(index) {
 		// 	summary = summary.substring(0, 1200) + '...'
 		// }
 
-		desc += `</small><a href=https://en.wikipedia.org/wiki/${wiki_entry.title}>` + wiki_entry.title + '</a> <small>(Courtesy of Wikipedia)'
+		desc += `</small><a href=https://en.wikipedia.org/wiki/${wiki_entry.title.replace(/\s/g, '_')}>` + wiki_entry.title + '</a> <small>(Courtesy of Wikipedia)'
 		desc += '<br>' + summary + '</small>'
 	} else {
 		desc += '</small>This minor system does not have a Wikipedia page assosciated with it.'
