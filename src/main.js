@@ -108,7 +108,12 @@ selectorCircle.rotation.set(Math.PI / 2, 0, 0);
 scene.add(selectorCircle);
 
 const DEFAULT_INFO = 'Click and drag to rotate.<br>Scroll to zoom.<br><strong>Click</strong> a star for more information.' +
-'<br><br><small>Source: The 10 parsec sample in the Gaia era' +
+'<br><br><small>This is a 3D map of all the nearby stellar systems within 10 parsecs, or 32.6 light years. The sun is located in the middle (zoom all the way in!). Try to find the following:' +
+'<br>- Us! The <strong>Solar System</strong>,' +
+'<br>- The closest stellar system, <strong>Alpha Centauri</strong>, (α Cen)' +
+'<br>- The brightest star in the night sky, <strong>Sirius</strong> (α Canis Majoris A),' +
+'<br>- The closest solitary white dwarf, <strong>van Maanen\'s star</strong> (Wolf 28)' +
+'<br><br>Project by Rishi Nath.<br>Source: <a href="https://gruze.org/10pc/resources/">The 10 parsec sample in the Gaia era</a>' +
 '<br>C. Reylé, K. Jardine, P. Fouqué, J. A. Caballero, R. L. Smart, A. Sozzetti' +
 '<br>A&A 650 A201 (2021)' +
 '<br>DOI: 10.1051/0004-6361/202140985'
@@ -117,14 +122,14 @@ infoBox.innerHTML = DEFAULT_INFO
 
 function getDesc(i) {
 	const s = sample[i]
-	let desc = `<strong>${s.name}</strong><br>distance: ${Math.sqrt(s.x ** 2 + s.y ** 2 + s.z ** 2).toFixed(2)} pc`;
+	let desc = `<strong>${s.name.replace('alf', 'α')}</strong><br>distance: ${Math.sqrt(s.x ** 2 + s.y ** 2 + s.z ** 2).toFixed(2)} pc`;
 
     desc += `<br><br>This system consists of the following bodies:<small><br>`
 
     for (let j in s.objs) {
         const obj = s.objs[j];
         desc +=
-            `<strong>${obj.name}</strong> (${type_map[obj.cat.replace('?', '')]})` +
+            `<strong>${obj.name.replace('alf', 'α')}</strong> (${type_map[obj.cat.replace('?', '')]})` +
             (obj.spectral_type ? `<br>spectral type: ${obj.spectral_type}` : '') +
             (obj.luminosity ? `<br>luminosity: ${obj.luminosity.toFixed(3)} L☉` : '') +
 			'<br><br>';
