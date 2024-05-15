@@ -168,9 +168,7 @@ function onMouseMove(event) {
         selectorCircle.visible = true;
 
         infoBox.innerHTML = getDesc(intersectedObject.name)
-    } else {
-		infoBox.innerHTML = DEFAULT_INFO
-	}
+    }
 }
 
 camera.position.set(0, 0, 20);
