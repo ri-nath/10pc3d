@@ -13,8 +13,20 @@ body {
 	margin: 0;
 	overflow: hidden;
 }
+
 canvas {
 	display: block;
+}
+
+.text-box {
+	padding: 10px;
+	background-color: rgba(40, 40, 40, 0.7);
+	border: 1px solid #cccccc52;
+	color: rgba(230, 230, 230, 1);
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+	text-align: left;
+	text-justify: kashida;
 }
 
 #info {
@@ -26,11 +38,6 @@ canvas {
 	width: 30%;
 	max-height: 90vh;
 	overflow: hidden;
-
-	color: rgba(230, 230, 230, 1);
-	font-family: Arial, sans-serif;
-	text-align: left;
-	text-justify: kashida;
 
 	display: flex;
 	flex-direction: column;
@@ -44,13 +51,8 @@ canvas {
 
 #info-search input {
 	flex: 1; /* Take up the remaining space */
-	padding: 10px;
-	background-color: rgba(40, 40, 40, 0.7);
-	border: 1px solid #cccccc52;
-	color: rgba(230, 230, 230, 1);
-	font-family: Arial, sans-serif;
 	border-right: none;
-	box-sizing: border-box;
+	@extend .text-box;
 }
 
 #info-search button {
@@ -58,25 +60,18 @@ canvas {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 10px;
-	background-color: rgba(40, 40, 40, 0.7);
-	border: 1px solid #cccccc52;
-	color: rgba(230, 230, 230, 1);
-	font-family: Arial, sans-serif;
 	cursor: pointer;
 	border-left: none;
+	@extend .text-box;
 }
 
 #info-text {
 	flex: 1;
 
-	padding: 10px;
-	background-color: rgba(40, 40, 40, 0.85);
-	border: 1px solid #cccccc52;
-
-	max-width: 100%;
 	overflow-y: auto;
 	max-height: calc(90vh - 60px);
+	background-color: rgba(40, 40, 40, 0.85); /* Different background for the info-text */
+	@extend .text-box;
 }
 
 #info a {

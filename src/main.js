@@ -2,7 +2,8 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import * as data from './data/data';
-import * as shapes from './shapes/shapes'
+import * as shapes from './shapes/shapes';
+import * as handle from './camera/camera';
 
 // Create a WebGL renderer and set its size to the window dimensions
 const renderer = new THREE.WebGLRenderer();
@@ -36,11 +37,33 @@ scene.add(equator);
 
 // Create a selector mesh and add it to the scene
 const selector = shapes.createSelectorMesh()
+selector.visible = false;
 scene.add(selector);
+
+// Create a highlight for the Solar System
+const highlight = shapes.createSelectorMesh(0xffff00, 0.15);
+scene.add(highlight);
 
 // Set the initial content of the info box
 const infoBox = document.getElementById('info-text');
 infoBox.innerHTML = data.DEFAULT_INFO
+
+// Animation loop to continuously update the controls and render the scene
+function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+
+    handle.updateCamera(camera, controls);
+}
+animate();
+
+function selectObject(obj) {
+    selector.position.copy(obj.position);
+    selector.visible = true;
+
+    infoBox.innerHTML = data.describeSystem(obj.name)
+}
 
 // Add a click event listener to handle object selection
 window.addEventListener('click', event => {
@@ -57,18 +80,35 @@ window.addEventListener('click', event => {
     // If there is an intersection, update the selector position and info box content
     if (intersects.length > 0) {
         const intersectedObject = intersects[0].object;
-        selector.position.copy(intersectedObject.position);
-        selector.visible = true;
-
-        infoBox.innerHTML = data.describeSystem(intersectedObject.name)
+        selectObject(intersectedObject)
     }
 }, false);
 
-// Animation loop to continuously update the controls and render the scene
-function animate() {
-    requestAnimationFrame(animate);
-    controls.update();
-    renderer.render(scene, camera);
-}
-animate();
+// Handle searching events
+document.addEventListener("DOMContentLoaded", () => {
+    // Function to handle search
+    function handleSearch() {
+      const query = document.getElementById('info-input').value;
+      console.log('Search query:', query);
+      // Add your search logic here
+      const result = data.search(query);
+      console.log(result)
+      if (result != undefined) {
+        const obj = stars[result]
+        selectObject(obj)
+        handle.setTarget(obj, camera, controls)
+      }
+    }
 
+    // Event listener for Enter key press in the input field
+    const input = document.getElementById('info-input');
+    input.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        handleSearch();
+      }
+    });
+
+    // Event listener for click on the search button
+    const button = document.getElementById('info-button');
+    button.addEventListener('click', handleSearch);
+  });

@@ -18,6 +18,32 @@ const type_map = {
     'WD': 'White dwarf',
 };
 
+function fuzz(query, test) {
+    // TODO: Improve
+    query = query.toLowerCase()
+    test = test.toLowerCase()
+    return query.includes(test) || test.includes(query)
+}
+
+export function search(query) {
+    let index = keys().find(key => fuzz(query, sample[key].name))
+    if (index != undefined) {
+        return index
+    }
+
+    let target = Object.keys(wiki).filter(key => fuzz(query, wiki[key].title))
+    if (target) {
+        return keys().find(key => sample[key].name == target)
+    }
+
+    index = keys().filter(sys => sys.objs.some(obj => fuzz(query, obj.name)))
+    if (index != undefined) {
+        return index
+    }
+
+    return false
+}
+
 /**
  * Generates the description of a star system based on the given index.
  * @param {number} index - The index of the star system.
@@ -62,7 +88,7 @@ export function describeSystem(index) {
 }
 
 export const DEFAULT_INFO = 'Click and drag to rotate.<br>Scroll to zoom.<br><strong>Click</strong> a star for more information.' +
-'<br><br><small>This is a 3D map of all the nearby stellar systems within 10 parsecs, or 32.6 light years. The sun is located in the middle (zoom all the way in!). Try to find the following:' +
+'<br><br><small>This is a 3D map of all the nearby stellar systems within 10 parsecs, or 32.6 light years. The sun is located in the middle (zoom all the way in!), it is highlighted by an extra yellow circle. Try to find the following:' +
 '<br>- Us! The <strong>Solar System</strong>,' +
 '<br>- The closest stellar system, <strong>Alpha Centauri</strong>, (α Cen)' +
 '<br>- The brightest star in the night sky, <strong>Sirius</strong> (α Canis Majoris A),' +
