@@ -39,7 +39,7 @@ const selector = shapes.createSelectorMesh()
 scene.add(selector);
 
 // Set the initial content of the info box
-const infoBox = document.getElementById('info');
+const infoBox = document.getElementById('info-text');
 infoBox.innerHTML = data.DEFAULT_INFO
 
 // Add a click event listener to handle object selection

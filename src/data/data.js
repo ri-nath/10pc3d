@@ -48,10 +48,9 @@ export function describeSystem(index) {
 		// }
 
 		let summary = wiki_entry.summary.replace(/\n/g, '<br><br>')
-		console.log(summary.length, summary[0].length)
-		if (summary.length > 1200) {
-			summary = summary.substring(0, 1200) + '...'
-		}
+		// if (summary.length > 1200) {
+		// 	summary = summary.substring(0, 1200) + '...'
+		// }
 
 		desc += `</small><a href=https://en.wikipedia.org/wiki/${wiki_entry.title}>` + wiki_entry.title + '</a> <small>(Courtesy of Wikipedia)'
 		desc += '<br>' + summary + '</small>'

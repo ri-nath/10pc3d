@@ -22,15 +22,61 @@ canvas {
 	top: 10px;
 	left: 10px;
 	padding: 10px;
-	background-color: rgba(40, 40, 40, 0.7);
-	border: 1px solid #cccccc52;
 
-	max-width: 40%;
+	width: 30%;
+	max-height: 90vh;
+	overflow: hidden;
 
 	color: rgba(230, 230, 230, 1);
 	font-family: Arial, sans-serif;
 	text-align: left;
 	text-justify: kashida;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#info-search {
+	display: flex;
+	width: 100%;
+}
+
+#info-search input {
+	flex: 1; /* Take up the remaining space */
+	padding: 10px;
+	background-color: rgba(40, 40, 40, 0.7);
+	border: 1px solid #cccccc52;
+	color: rgba(230, 230, 230, 1);
+	font-family: Arial, sans-serif;
+	border-right: none;
+	box-sizing: border-box;
+}
+
+#info-search button {
+	width: 40px; /* Ensure the button has a width */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	background-color: rgba(40, 40, 40, 0.7);
+	border: 1px solid #cccccc52;
+	color: rgba(230, 230, 230, 1);
+	font-family: Arial, sans-serif;
+	cursor: pointer;
+	border-left: none;
+}
+
+#info-text {
+	flex: 1;
+
+	padding: 10px;
+	background-color: rgba(40, 40, 40, 0.85);
+	border: 1px solid #cccccc52;
+
+	max-width: 100%;
+	overflow-y: auto;
+	max-height: calc(90vh - 60px);
 }
 
 #info a {
