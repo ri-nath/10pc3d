@@ -16,7 +16,9 @@ const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerH
 const controls = new OrbitControls(camera, renderer.domElement);
 
 // Set the initial position of the camera and update the controls
-camera.position.set(0, 0, 20);
+camera.position.set(0, 20, 30);
+controls.autoRotate = true
+controls.autoRotateSpeed = 0.5
 controls.update();
 
 // Create stars based on data and add them to the scene
@@ -67,6 +69,8 @@ function selectObject(obj) {
 
 // Add a click event listener to handle object selection
 window.addEventListener('click', event => {
+    controls.autoRotate = false
+
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 
@@ -111,4 +115,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event listener for click on the search button
     const button = document.getElementById('info-button');
     button.addEventListener('click', handleSearch);
+
+    const home = document.getElementById('home-button');
+    home.addEventListener('click', () => {
+      const obj = stars[0]
+      camera.position.set(0, 20, 30);
+      controls.target = obj.position.clone()
+      handle.reset()
+    })
   });

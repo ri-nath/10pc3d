@@ -42,16 +42,39 @@ canvas {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+
+	@media (max-width: 600px) {
+		top: auto;
+		bottom: 10px;
+		left: 10px;
+		right: 10px;
+
+		width: 90%;
+		max-height: 35vh;
+
+		font-size: small;
+
+		flex-direction: column;
+		justify-content: center;
+		gap: 10px;
+		padding: 5px;
+	}
 }
 
 #info-search {
 	display: flex;
 	width: 100%;
+
+	@media (max-width: 600px) {
+		width: auto;
+		flex: 1;
+	}
 }
 
 #info-search input {
 	flex: 1; /* Take up the remaining space */
 	border-right: none;
+	border-left: none;
 	@extend .text-box;
 }
 
@@ -61,7 +84,6 @@ canvas {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	border-left: none;
 	@extend .text-box;
 }
 
@@ -72,6 +94,11 @@ canvas {
 	max-height: calc(90vh - 60px);
 	background-color: rgba(40, 40, 40, 0.85); /* Different background for the info-text */
 	@extend .text-box;
+
+	@media (max-width: 600px) {
+		max-height: 100%;
+		flex: 2;
+	}
 }
 
 #info a {

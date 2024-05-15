@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 let isCameraMoving = false
-let target = null
+let target = new THREE.Vector3(0, 0, 0)
 
 export function updateCamera(camera, controls, lerp_alpha=0.05, pos_cutoff=4) {
     if (!(isCameraMoving && target)) return;
@@ -15,8 +15,13 @@ export function updateCamera(camera, controls, lerp_alpha=0.05, pos_cutoff=4) {
 
 export function setTarget(t, camera, controls) {
     isCameraMoving = true
-    target = t.position
+    target = t.position.clone()
 
-    controls.target = t.position;
+    controls.target = target
     controls.update()
+}
+
+export function reset() {
+    isCameraMoving = false
+    target = new THREE.Vector3(0, 0, 0)
 }
