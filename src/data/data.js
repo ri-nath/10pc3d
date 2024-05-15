@@ -12,10 +12,10 @@ export function keys() {
 }
 
 const type_map = {
-    'LM': 'Low-mass star',
-    'BD': 'Brown dwarf',
-    '*': 'star',
-    'WD': 'White dwarf',
+    'LM': 'low-mass star',
+    'BD': 'brown dwarf',
+    '*': 'main-sequence star',
+    'WD': 'white dwarf',
 };
 
 function fuzz(query, test) {
@@ -57,13 +57,25 @@ export function describeSystem(index) {
         const obj = star.objs[j];
         if (obj.cat.includes('Planet')) continue
 
-        let type = obj.cat.includes('*') ? obj.spectral_type + '-type ' : ''
+        let type = obj.spectral_type ? obj.spectral_type + '-type ' : ''
         type += type_map[obj.cat.replace('?', '')]
+
+        const [mantissa, power] = ('' + obj.luminosity.toExponential(1)).split('e')
+
+        let luminosity = ''
+        if (obj.luminosity > 1){
+            luminosity = obj.luminosity.toFixed(1)
+        }else {
+            luminosity = mantissa
+            if (power != 0)
+                luminosity += ` × 10<sup>${power}</sup>`
+        }
+
 
         desc +=
             `<strong>${obj.name.replace('alf', 'α')}</strong>` +
             '<br>class: ' + type +
-            (obj.luminosity ? `<br>luminosity: ${obj.luminosity.toFixed(3)} L☉` : '') +
+            (obj.luminosity ? `<br>est. luminosity: ${luminosity} L☉` : '') +
 			'<br><br>';
     }
 
@@ -88,7 +100,8 @@ export function describeSystem(index) {
 }
 
 export const DEFAULT_INFO = 'Click and drag to rotate.<br>Scroll to zoom.<br><strong>Click</strong> a star for more information.' +
-'<br><br><small>This is a 3D map of all the nearby stellar systems within 10 parsecs, or 32.6 light years. The sun is located in the middle (zoom all the way in!), it is highlighted by an extra yellow circle. Try to find the following:' +
+'<br><br><small>This is a 3D visualization of all the nearby stellar systems within 10 parsecs, or 32.6 light years, of us. The various stars are colored according to their spectral type.' +
+'The sun is located in the middle; it is also always highlighted by an extra yellow circle. Try to find the following:' +
 '<br>- Us! The <strong>Solar System</strong>,' +
 '<br>- The closest stellar system, <strong>Alpha Centauri</strong>, (α Cen)' +
 '<br>- The brightest star in the night sky, <strong>Sirius</strong> (α Canis Majoris A),' +
