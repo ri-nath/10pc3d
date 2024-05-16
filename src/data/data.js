@@ -135,7 +135,7 @@ export class Star {
                 ? `<span style="margin: 10px; ${dot_style}"></span>${obj.name}`
                 : `<span style="${dot_style}">${obj.name}</span>`
 
-            return `<tr><td style="font-size: small; width: 50%;"><strong>${obj.name}</strong>` +
+            return `<tr><td style="font-size: x-small; width: 50%;"><strong>${obj.name}</strong>` +
                 `<br>class: <span style="color: black; background-color: #${obj_color}">${type}</span>` +
                 (obj.luminosity ? `<br>est. luminosity: ${luminosity} L☉` : '') +
                 `</td><td style="font-size: xx-small; align-items: center; display: flex; justify-content: center; flex-direction: column;">${dot}</td></tr>`

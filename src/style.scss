@@ -44,6 +44,7 @@ canvas {
 	gap: 20px;
 
 	@media (max-width: 600px) {
+		margin: auto;
 		top: auto;
 		bottom: 10px;
 		left: 10px;
