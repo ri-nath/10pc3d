@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
-import * as data from './data/data';
 import * as shapes from './shapes/shapes';
+import { keys, search, DEFAULT_INFO, Star } from './data/data';
 import { Handle } from './camera/camera';
 
 // Create a WebGL renderer and set its size to the window dimensions
@@ -22,8 +22,8 @@ controls.autoRotateSpeed = 0.1
 controls.update();
 
 // Create stars based on data and add them to the scene
-const stars = data.keys().map(index => {
-    const star = new data.Star(index)
+const stars = keys().map(index => {
+    const star = new Star(index)
     const radius = star.getSystemDrawRadius();
     const color = star.getSystemDrawColor();
     const coords = star.getSystemDrawCoordinates();
@@ -50,7 +50,7 @@ scene.add(highlight);
 
 // Set the initial content of the info box
 const infoBox = document.getElementById('info-text');
-infoBox.innerHTML = data.DEFAULT_INFO
+infoBox.innerHTML = DEFAULT_INFO
 
 const handle = new Handle(camera, controls)
 
@@ -58,17 +58,15 @@ const handle = new Handle(camera, controls)
 function animate() {
     requestAnimationFrame(animate);
     controls.update();
-    renderer.render(scene, camera);
-
     handle.update();
+    renderer.render(scene, camera);
 }
 animate();
 
 function selectObject(obj) {
     selector.position.copy(obj.position);
     selector.visible = true;
-
-    infoBox.innerHTML = new data.Star(obj.name).describeSystem()
+    infoBox.innerHTML = new Star(obj.name).describeSystem()
 }
 
 // Add a click event listener to handle object selection
@@ -105,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const query = document.getElementById('info-input').value;
       console.log('Search query:', query);
       // Add your search logic here
-      const result = data.search(query);
+      const result = search(query);
       console.log(result)
       if (result != undefined) {
         const obj = stars[result]
@@ -137,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const random = document.getElementById('random-button');
     random.addEventListener('click', () => {
       const randomIndex = Math.floor(Math.random() * stars.length);
-      const randomStar = stars[data.keys()[randomIndex]];
+      const randomStar = stars[randomIndex];
       selectObject(randomStar)
       handle.target(randomStar)
     })
