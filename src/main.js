@@ -131,4 +131,12 @@ document.addEventListener("DOMContentLoaded", () => {
       controls.target = obj.position.clone()
       handle.reset()
     })
+
+    const random = document.getElementById('random-button');
+    random.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * stars.length);
+      const randomStar = stars[data.keys()[randomIndex]];
+      selectObject(randomStar)
+      handle.setTarget(randomStar, camera, controls)
+    })
   });

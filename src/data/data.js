@@ -209,7 +209,7 @@ export function search(query) {
 export const DEFAULT_INFO = 'Click and drag to rotate.<br>Scroll to zoom.<br><strong>Click</strong> a star for more information.' +
 '<br><br><small>This is a 3D visualization of all the nearby stellar systems within 10 parsecs, or 32.6 light years, of us. The various stars are colored according to their spectral type.' +
 'The sun is located in the middle; it is also always highlighted by an extra yellow circle.' +
-'<br><br>If you\'re lost, try looking for us (the Solar System).' +
+'<br><br>Lost? Use the random button (🎲) to go to a random star and learn something cool!' +
 '<br>Also, try clicking on <strong>blue</strong> stars. The blue stars are all very luminous;' +
 'they can all be seen in the night sky, so they may belong to constellations that you\'re familiar with.' +
 '<br><br>Project by Rishi Nath.<br>' +
