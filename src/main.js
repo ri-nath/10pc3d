@@ -18,7 +18,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 // Set the initial position of the camera and update the controls
 camera.position.set(0, 20, 30);
 controls.autoRotate = true
-controls.autoRotateSpeed = 0.25
+controls.autoRotateSpeed = 0.1
 controls.update();
 
 // Create stars based on data and add them to the scene
@@ -80,10 +80,19 @@ window.addEventListener('click', event => {
 
     // Perform raycasting to determine which objects are intersected by the mouse click
     const intersects = shapes.multiRaycast(mouse, camera, stars, raycaster)
-                             .map(int => int.object.type == "Sprite" ? int.object.parent : int.object);
+
+    const objIntersects = intersects
+      .filter(int => int.object.type != "Sprite")
+      .map(int => int.object)
+    const spriteIntersects = intersects
+      .filter(int => int.object.type == "Sprite")
+      .map(int => int.object.parent)
     // If there is an intersection, update the selector position and info box content
-    if (intersects.length > 0) {
-        selectObject(intersects[0])
+    if (objIntersects.length > 0) {
+        selectObject(objIntersects[0])
+    }
+    else if (spriteIntersects.length > 0){
+      selectObject(spriteIntersects[0])
     }
 }, false);
 
