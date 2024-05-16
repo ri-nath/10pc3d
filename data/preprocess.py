@@ -13,6 +13,68 @@ wiki_wiki = wikipediaapi.Wikipedia('10pc3d (rishi.nath@gmail.com)', 'en')
 # DOI: 10.1051/0004-6361/202140985
 df = pd.read_csv('data/10pc_sample_raw.csv')
 
+import re
+def parse_greek(name):
+    import re
+
+def parse_greek(name):
+    prefix = {
+        'alf': 'Alpha',
+        'bet': 'Beta',
+        'gam': 'Gamma',
+        'del': 'Delta',
+        'eps': 'Epsilon',
+        'zet': 'Zeta',
+        'eta': 'Eta',
+        'the': 'Theta',
+        'iot': 'Iota',
+        'kap': 'Kappa',
+        'lam': 'Lambda',
+        'mu': 'Mu',
+        'nu': 'Nu',
+        'ksi': 'Xi',
+        'omi': 'Omicron',
+        'pi': 'Pi',
+        'rho': 'Rho',
+        'sig': 'Sigma',
+        'tau': 'Tau',
+        'ups': 'Upsilon',
+        'phi': 'Phi',
+        'chi': 'Chi',
+        'psi': 'Psi',
+        'ome': 'Omega'
+    }
+
+
+    for key, value in prefix.items():
+        name = re.sub('^' + key + '[0\\.]*(?=\\d*\\s)', value, name, flags=re.IGNORECASE)
+
+    # TODO: Use simbad api instead
+    suffix = {
+        'Vir': 'Virginis',
+        'Oph': 'Ophiuchi',
+        'Ori': 'Orionis',
+        'Cet': 'Ceti',
+        'Ara': 'G. Arae',
+        'CMa': 'Canis Majoris',
+        'Hya': 'Hydrae',
+        'Peg': 'Pegasi',
+        'Ari': 'Arietis',
+        'Cen': 'Centauri',
+        'Aur': 'Aurigae',
+        'CMi': 'Canis Minoris',
+        'Eri': 'Eridani',
+        'Pav': 'Pavonis',
+        'CVn': 'Canum Venaticorum',
+        'Cas': 'Cassiopeiae',
+        'Hyi': 'Hydri',
+    }
+
+    for key, value in suffix.items():
+        name = re.sub(' ' + key + '(?=$|\\s)', ' ' + value, name, flags=re.IGNORECASE)
+
+    return name
+
 def star_to_obj(sys_dict, item):
     nb_sys = str(item['NB_SYS'])
     nb_obj = str(item['NB_OBJ'])
@@ -26,7 +88,7 @@ def star_to_obj(sys_dict, item):
 
     if nb_sys not in sys_dict:
         sys_dict[nb_sys] = {
-            'name': item['SYSTEM_NAME'],
+            'name': parse_greek(item['SYSTEM_NAME']),
             'x': x,
             'y': y,
             'z': z,
@@ -39,7 +101,7 @@ def star_to_obj(sys_dict, item):
     luminosity = np.power(10, 0.4 * (5.12 - mag)) if not np.isnan(mag) else np.nan
 
     sys_dict[nb_sys]['objs'][nb_obj] = {
-        'name': item['OBJ_NAME'],
+        'name': parse_greek(item['OBJ_NAME']),
         'cat': item['OBJ_CAT'],
         'spectral_type': item['SP_TYPE'],
         'luminosity': luminosity,
@@ -73,23 +135,16 @@ if do_dl_wiki:
     for i in sys_dict.keys():
         name = sys_dict[i]['name']
         if name not in wiki:
-            print('Getting page ' + name)
-            page_py = wiki_wiki.page(name
-                                    .replace('alf ', 'Alpha_')
-                                    .replace('bet ', 'Beta_')
-                                    .replace('gam', 'Gamma_')
-                                    .replace('eps ', 'Epsilon_')
-                                    .replace('del', 'Delta_')
-                                    .replace('ksi ', 'Xi_')
-                                    .replace('sig ', 'Sigma_'))
+            page_py = wiki_wiki.page(name.replace(' ', '_'))
+
             if (page_py.exists()):
                 wiki[name] = {
                     'title': page_py.title,
                     'summary': page_py.summary,
                 }
+                pass
             else:
-                print('Page ' + name + ' did not exist!')
-
+                print('Warning: page "' + name.replace(' ', '_') + '" does not exist!')
 
     with open('data/10pc_wiki.json', 'w') as fp:
         json.dump(wiki, fp)

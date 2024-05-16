@@ -8,7 +8,7 @@ import { sample } from './10_pc_sample';
 import { wiki } from './10_pc_wiki'
 
 const BASE_GLOW = 0.4
-const BASE_RADIUS = 0.05
+const BASE_RADIUS = 0.06
 const class_map = {
     'O': {
         color: 0xA6BBF6,
@@ -41,9 +41,9 @@ const class_map = {
         draw_radius: 0.8 * BASE_RADIUS,
     },
     'M': {
-        color: 0xffd2a1,
-        glow: 0.5 * BASE_GLOW,
-        draw_radius: 0.8 * BASE_RADIUS,
+        color: 0xF47939,
+        glow: 0.3 * BASE_GLOW,
+        draw_radius: 0.5 * BASE_RADIUS,
     },
     'WHITE_DWARF': {
         color: 0xFFFFFF,
@@ -53,7 +53,7 @@ const class_map = {
     'BROWN_DWARF': {
         color: 0x851C05,
         glow: 0,
-        draw_radius: 0.4 * BASE_RADIUS,
+        draw_radius: 0.5 * BASE_RADIUS,
     },
 }
 
@@ -78,9 +78,9 @@ export class Star {
 
     describeSystem() {
         const type_map = {
-            'LM': 'low-mass this.star',
+            'LM': 'low-mass star',
             'BD': 'brown dwarf',
-            '*': 'main-sequence this.star',
+            '*': 'main-sequence star',
             'WD': 'white dwarf',
         };
 
@@ -90,7 +90,7 @@ export class Star {
             const obj = this.star.objs[j];
             if (obj.cat.includes('Planet')) continue
 
-            let type = obj.spectral_type ? obj.spectral_type + '-type ' : ''
+            let type = obj.spectral_type ? obj.spectral_type + '-class ' : ''
             type += type_map[obj.cat.replace('?', '')]
 
             const [mantissa, power] = ('' + obj.luminosity.toExponential(1)).split('e')
