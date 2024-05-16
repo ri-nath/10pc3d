@@ -51,7 +51,7 @@ canvas {
 		right: 10px;
 
 		width: 90%;
-		max-height: 35vh;
+		max-height: 25vh;
 
 		font-size: small;
 
@@ -91,9 +91,9 @@ canvas {
 #info-text {
 	flex: 1;
 
-	overflow-y: auto;
+	overflow-y: scroll;
 	max-height: calc(90vh - 60px);
-	background-color: rgba(40, 40, 40, 0.85); /* Different background for the info-text */
+	background-color: rgba(40, 40, 40, 0.85);
 	@extend .text-box;
 
 	@media (max-width: 600px) {
