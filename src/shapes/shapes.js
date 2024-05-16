@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 import glow from '../../resources/glow.png'
+import star from '../../resources/star.png'
+import { Vector2 } from 'three';
 
 /**
  * Creates a dashed circle mesh.
@@ -51,14 +53,23 @@ export function createStarMesh(radius, color, coords, glow_amnt=0, segments=16) 
     // SUPER SIMPLE GLOW EFFECT
 	// use sprite because it appears the same from all angles
     if (glow_amnt > 0) {
-        var spriteMaterial = new THREE.SpriteMaterial(
+        const glowSpriteMaterial = new THREE.SpriteMaterial(
             {
                 map: new THREE.TextureLoader().load(glow),
                 color: color, transparent: true, blending: THREE.AdditiveBlending
         });
-        var sprite = new THREE.Sprite( spriteMaterial );
-        sprite.scale.set(glow_amnt, glow_amnt, glow_amnt);
-        mesh.add(sprite); // this centers the glow at the mesh
+        const glowSprite = new THREE.Sprite( glowSpriteMaterial );
+        glowSprite.scale.set(glow_amnt, glow_amnt, glow_amnt);
+        mesh.add(glowSprite);
+
+        const starSpriteMaterial = new THREE.SpriteMaterial(
+            {
+                map: new THREE.TextureLoader().load(star),
+                color: color, transparent: true, blending: THREE.AdditiveBlending
+        });
+        const starSprite = new THREE.Sprite( starSpriteMaterial );
+        starSprite.scale.set(glow_amnt * 2, glow_amnt * 2, glow_amnt * 2);
+        mesh.add(starSprite);
     }
 
     return mesh

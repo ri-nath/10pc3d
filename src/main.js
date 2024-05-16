@@ -23,15 +23,16 @@ controls.update();
 
 // Create stars based on data and add them to the scene
 const stars = data.keys().map(index => {
-    const radius = data.getSystemDrawRadius(index);
-    const color = data.getSystemDrawColor(index);
-    const coords = data.getSystemDrawCoordinates(index);
-    const glow = data.getSystemDrawGlowAmnt(index)
+    const star = new data.Star(index)
+    const radius = star.getSystemDrawRadius();
+    const color = star.getSystemDrawColor();
+    const coords = star.getSystemDrawCoordinates();
+    const glow = star.getSystemDrawGlowAmnt()
 
-    const star = shapes.createStarMesh(radius, color, coords, glow)
-    star.name = index
-    scene.add(star)
-    return star
+    const mesh = shapes.createStarMesh(radius, color, coords, glow)
+    mesh.name = index
+    scene.add(mesh)
+    return mesh
 });
 
 // Create an equator circle and add it to the scene
@@ -65,7 +66,7 @@ function selectObject(obj) {
     selector.position.copy(obj.position);
     selector.visible = true;
 
-    infoBox.innerHTML = data.describeSystem(obj.name)
+    infoBox.innerHTML = new data.Star(obj.name).describeSystem()
 }
 
 // Add a click event listener to handle object selection
