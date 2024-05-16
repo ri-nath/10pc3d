@@ -18,7 +18,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 // Set the initial position of the camera and update the controls
 camera.position.set(0, 20, 30);
 controls.autoRotate = true
-controls.autoRotateSpeed = 0.5
+controls.autoRotateSpeed = 0.25
 controls.update();
 
 // Create stars based on data and add them to the scene
@@ -71,8 +71,6 @@ function selectObject(obj) {
 
 // Add a click event listener to handle object selection
 window.addEventListener('click', event => {
-    controls.autoRotate = false
-
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
 

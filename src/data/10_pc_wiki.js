@@ -39,12 +39,12 @@ export const wiki = {
 		summary:
 			"Gliese 65, also known as Luyten 726-8, is a binary star system that is one of Earth's nearest neighbors, at 8.8 light-years (2.7 parsecs) from Earth in the constellation Cetus. The two component stars are both flare stars with the variable star designations BL Ceti and UV Ceti.",
 	},
-	'V1216 Sgr': {
+	'V1216 Sagittarii': {
 		title: 'Ross 154',
 		summary:
 			'Ross 154 (V1216 Sgr) is a star in the southern zodiac constellation of Sagittarius. It has an apparent visual magnitude of 10.44, making it much too faint to be seen with the naked eye. At a minimum, viewing Ross 154 requires a telescope with an aperture of\n6.5 cm (3 in) under ideal conditions. The distance to this star can be estimated from parallax measurements, which places it at 9.71 light-years (2.98 parsecs) away from Earth. It is the nearest star in the southern constellation Sagittarius, and one of the nearest stars to the Sun.',
 	},
-	'HH And': {
+	'HH Andromedae': {
 		title: 'Ross 248',
 		summary:
 			'Ross 248, also called HH Andromedae or Gliese 905, is a small star approximately 10.30 light-years (3.16 parsecs) from Earth in the northern constellation of Andromeda. Despite its proximity it is too dim to be seen with the naked eye. It was first catalogued by Frank Elmore Ross in 1926 with his second list of proper-motion stars; on which count it ranks 261st in the SIMBAD database.  It was too dim to be included in the Hipparcos survey. In about 40,000 years, Voyager 2 will pass 1.7 light-years (9.7 trillion miles) from the star.\nWithin the next 80,000 years, Ross 248 is predicted to be the nearest star to the Sun for around 9,000 years, overtaking the current nearest star, the triple system Alpha Centauri.',
@@ -64,17 +64,17 @@ export const wiki = {
 		summary:
 			'Ross 128 is a red dwarf in the equatorial zodiac constellation of Virgo, near \u03b2 Virginis. The apparent magnitude of Ross 128 is 11.13, which is too faint to be seen with the unaided eye. Based upon parallax measurements, the distance of this star from Earth is 11.007 light-years (3.375 parsecs), making it the twelfth closest stellar system to the Solar System. It was first cataloged in 1926 by American astronomer Frank Elmore Ross.',
 	},
-	'EZ Aqr': {
+	'EZ Aquarii': {
 		title: 'EZ Aquarii',
 		summary:
 			'EZ Aquarii is a triple star system 11.1 light-years (3.4 parsecs) from the Sun in the constellation Aquarius within the Milky Way. It is also known as Luyten 789-6, Gliese 866 and LHS 68.  It is a variable star showing flares as well as smaller brightness changes due to rotation. The aggregate mass of the system is 0.3262\u00b10.0018 solar masses. All three seem to have masses close to the hydrogen burning mass limit.\nThe configuration of the inner binary pair may permit a circumbinary planet to orbit near their habitable zone, however no exoplanets have yet been observed. EZ Aquarii is approaching the Solar System and, in about 32,300 years, will be at its minimal distance of about 8.2 ly (2.5 pc) from the Sun. The ChView simulation shows that currently its nearest neighbouring star is Lacaille 9352 at about 4.1 ly (1.3 pc) from EZ Aquarii.',
 	},
-	'61 Cyg': {
+	'61 Cygni': {
 		title: '61 Cygni',
 		summary:
 			'61 Cygni  is a binary star system in the constellation Cygnus, consisting of a pair of K-type dwarf stars that orbit each other in a period of about 659 years. Of apparent magnitude 5.20 and 6.05, respectively, they can be seen with binoculars in city skies or with the naked eye in rural areas without light pollution.\n61 Cygni first attracted the attention of astronomers when its large proper motion was first demonstrated by Giuseppe Piazzi in 1804. In 1838, Friedrich Bessel measured its distance from Earth at about 10.4 light-years, very close to the actual value of about 11.4 light-years; this was the first distance estimate for any star other than the Sun, and first star to have its stellar parallax measured. Among all stars or stellar systems listed in the modern Hipparcos Catalogue, 61 Cygni has the seventh-highest proper motion, and the highest among all visible stars or systems.\nOver the course of the twentieth century, several different astronomers reported evidence of a massive planet orbiting one of the two stars, but recent high-precision radial velocity observations have shown that all such claims were unfounded. No planets have been confirmed in this stellar system to date.',
 	},
-	'Alpha Canis Minoris': {
+	'Alpha CMi': {
 		title: 'Procyon',
 		summary:
 			"Procyon () is the brightest star in the constellation of Canis Minor and usually the eighth-brightest star in the night sky, with an apparent visual magnitude of 0.34. It has the Bayer designation \u03b1 Canis Minoris, which is Latinized to Alpha Canis Minoris, and abbreviated \u03b1 CMi or Alpha CMi, respectively. As determined by the European Space Agency Hipparcos astrometry satellite, this system lies at a distance of just 11.46 light-years (3.51 parsecs), and is therefore one of Earth's nearest stellar neighbors.\nA binary star system, Procyon consists of a white-hued main-sequence star of spectral type F5 IV\u2013V, designated component A, in orbit with a faint white dwarf companion of spectral type DQZ, named Procyon B. The pair orbit each other with a period of 40.84 years and an eccentricity of 0.4.",
@@ -89,7 +89,7 @@ export const wiki = {
 		summary:
 			"DX Cancri is a variable star in the northern zodiac constellation of Cancer. With an apparent visual magnitude of 14.81, it is much too faint to be seen with the naked eye. Visually viewing this star requires a telescope with a minimum aperture of 16 in (41 cm). Based upon parallax measurements, DX Cancri is located at a distance of 11.8 light-years (3.6 parsecs) from Earth. This makes it the 18th closest star (or star system) to the Sun.\nThe star has a stellar classification of M6.5V, identifying it as a type of main sequence star known as a red dwarf. It has about 9% of the mass of the Sun, and 11% of the Sun's radius. The outer envelope of the star has an effective temperature of 2,840 K, making it an M-type star. It is a flare star that has random, intermittent increases in brightness by up to a factor of five. It is a proposed member of the Castor Moving Group of stars that share a common trajectory through space. This group has an estimated age of 200 million years.",
 	},
-	'Epsilon Ind': {
+	'Epsilon Indi': {
 		title: 'Epsilon Indi',
 		summary:
 			'Epsilon Indi, Latinized from \u03b5 Indi, is a star system located at a distance of approximately 12 light-years from Earth in the southern constellation of Indus. The star has an orange hue and is faintly visible to the naked eye with an apparent visual magnitude of 4.83. It consists of a K-type main-sequence star, \u03b5 Indi A, and two brown dwarfs, \u03b5 Indi Ba and \u03b5 Indi Bb, in a wide orbit around it. The brown dwarfs were discovered in 2003. \u03b5 Indi Ba is an early T dwarf (T1) and \u03b5 Indi Bb a late T dwarf (T6) separated by 0.6 arcseconds, with a projected distance of 1460 AU from their primary star.\n\u03b5 Indi A has one known planet, \u03b5 Indi Ab, with a mass of 3.3 Jupiter masses in an elliptical orbit with a period of about 45 years. \u03b5 Indi Ab is the second-closest Jovian exoplanet, after \u03b5 Eridani b. The \u03b5 Indi system provides a benchmark case for the study of the formation of gas giants and brown dwarfs.',
@@ -124,7 +124,7 @@ export const wiki = {
 		summary:
 			"Kapteyn's Star is a class M1 red subdwarf about 12.83 light-years from Earth in the southern constellation Pictor; it is the closest halo star to the Solar System. With an apparent magnitude of nearly 9 it is visible through binoculars or a telescope.\nIts diameter is 30% of the Sun's, but its luminosity just 1.2% that of the Sun. It may have once been part of the globular cluster Omega Centauri, itself the likely core of a dwarf galaxy swallowed up by the Milky Way in the distant past. The discovery of two planets\u2014Kapteyn b and Kapteyn c\u2014was announced in 2014, but had a mixed history of rejections and confirmations, until a 2021 study refuted both planets. The \"planets\" are in fact artifacts of the star's rotation and activity.",
 	},
-	'AX Mic': {
+	'AX Microscopii': {
 		title: 'Lacaille 8760',
 		summary:
 			"Lacaille 8760 (AX Microscopii) is a red dwarf star in the constellation Microscopium. It is one of the nearest stars to the Sun at about 12.9 light-years' distance, and the brightest M-class main-sequence star in Earth's night sky, although it is generally too faint to be seen without a telescope. At an apparent magnitude of +6.7, it may only be visible to the unaided eye under exceptionally good viewing conditions, under dark skies.\nThis star was originally listed in a 1763 catalog that was published posthumously by the French Abb\u00e9 Nicolas-Louis de Lacaille. He observed it in the southern sky while working from an observatory at the Cape of Good Hope. Number 8760 was assigned to this star in the 1847 edition of Lacaille's catalogue of 9,766 stars by Francis Baily.\nIn the past, Lacaille 8760 has been classified anywhere from spectral class K7 down to M2. In 1979, the Irish astronomer Patrick Byrne discovered that it is a flare star, and it was given the variable star designation AX Microscopii, or AX Mic. As a flare star it is relatively quiescent.\n\nLacaille 8760 is one of the largest and brightest red dwarfs known, with about 60% the mass and 51% the radius of the Sun. It is about five billion years old and is spinning at a projected rotational velocity of 3.3 km/s, giving it a rotation period of roughly 40 days. The star is radiating 7.2% of the luminosity of the Sun from its photosphere at an effective temperature of 3,800 K.\nDespite efforts by astronomers, as of 2011 no planets had been detected in orbit around this star.\nLacaille 8760 orbits around the galaxy with a relatively high ellipticity of 0.23. Its closest approach to the Sun occurred about 20,000 years ago when it came within 12 light-years (3.7 parsecs). Due to its low mass (60% of the Sun), it has an expected lifespan of about 75 billion (7.5 \u00d7 1010) years, seven times longer than the Sun's.",
@@ -214,7 +214,7 @@ export const wiki = {
 		summary:
 			'WISEPA J174124.26+255319.5 (designation is abbreviated to WISE 1741+2553) is a brown dwarf of spectral class T9, located in constellation Hercules at approximately 15.2 light-years from Earth.',
 	},
-	'IL Aqr': {
+	'IL Aquarii': {
 		title: 'Gliese 876',
 		summary:
 			"Gliese 876 is a red dwarf star 15.2 light-years (4.7 parsecs) away from Earth in the constellation of Aquarius. It is one of the closest known stars to the Sun confirmed to possess a planetary system with more than two planets, after GJ 1061, YZ Ceti, Tau Ceti, and Wolf 1061; as of 2018, four extrasolar planets have been found to orbit the star. The planetary system is also notable for the orbital properties of its planets. It is the only known system of orbital companions to exhibit a near-triple conjunction in the rare phenomenon of Laplace resonance (a type of resonance first noted in Jupiter's inner three Galilean moons). It is also the first extrasolar system around a normal star with measured coplanarity. While planets b and c are located in the system's habitable zone, they are giant planets believed to be analogous to Jupiter.",
@@ -264,7 +264,7 @@ export const wiki = {
 		summary:
 			"40 Eridani is a triple star system in the constellation of Eridanus, abbreviated 40 Eri. It has the Bayer designation Omicron2 Eridani, which is Latinized from \u03bf2 Eridani and abbreviated Omicron2 Eri or \u03bf2 Eri. Based on parallax measurements taken by the Gaia mission, it is about 16.3 light-years from the Sun.\nThe primary star of the system, designated 40 Eridani A and named Keid, is easily visible to the naked eye. It is orbited by a binary pair whose two components are designated 40 Eridani B and C, and which were discovered on January 31, 1783, by William Herschel.:\u200ap73\u200a It was again observed by Friedrich Struve in 1825 and by Otto Struve in 1851.\nIn 1910, it was discovered that although component B was a faint star, it was white in color. This meant that it had to be a small star; in fact it was a white dwarf, the first discovered. Although it is neither the closest white dwarf, nor the brightest in the night sky, it is by far the easiest to observe; it is nearly three magnitudes brighter than Van Maanen's Star, the nearest solitary white dwarf, and unlike the companions of Procyon and Sirius it is not swamped in the glare of a much brighter primary.",
 	},
-	'EV Lac': {
+	'EV Lacertae': {
 		title: 'EV Lacertae',
 		summary:
 			"EV Lacertae (EV Lac, Gliese 873, HIP 112460) is a faint red dwarf star 16.5 light years away in the constellation Lacerta. It is the nearest star to the Sun in that region of the sky, although with an apparent magnitude of 10, it is only barely visible with binoculars. EV Lacertae is spectral type M3.5 flare star that emits X-rays.\n\nOn 25 April 2008, NASA's Swift satellite picked up a record-setting flare from EV Lacertae. This flare was thousands of times more powerful than the largest observed solar flare. Because EV Lacertae is much farther from Earth than the Sun, the flare did not appear as bright as a solar flare. The flare would have been visible to the naked eye if the star had been in an observable part of the night sky at the time. It was the brightest flare ever seen from a star other than the Sun.\nEV Lacertae is much younger than that of the Sun. Its age is estimated at 300 million years, and it is still spinning rapidly. The fast spin, together with its convective interior, produces a magnetic field much more powerful than that of the Sun. This strong magnetic field is believed to play a role in the star's ability to produce such bright flares. After the flare, the star was blue.\nIn October 2022, another stellar flare was observed in EV Lacertae by a group of scientists led by Shun Inoue of Kyoto University, after observing the star in near-ultraviolet and white-light curves. The finding was announced and detailed in December 31, 2023, in the pre-print server arXiv.\n\n\n== References ==",
@@ -279,7 +279,7 @@ export const wiki = {
 		summary:
 			'70 Ophiuchi is a binary star system located 16.6 light years away from the Earth.  It is in the constellation Ophiuchus. At magnitude 4 it appears as a dim star visible to the unaided eye away from city lights.',
 	},
-	'Alpha Aql': {
+	'Alpha Aquilae': {
 		title: 'Altair',
 		summary:
 			"Altair is the brightest star in the constellation of Aquila and the twelfth-brightest star in the night sky. It has the Bayer designation Alpha Aquilae, which is Latinised from \u03b1 Aquilae and abbreviated Alpha Aql or \u03b1 Aql. Altair is an A-type main-sequence star with an apparent visual magnitude of 0.77 and is one of the vertices of the Summer Triangle asterism; the other two vertices are marked by Deneb and Vega. It is located at a distance of 16.7 light-years (5.1 parsecs) from the Sun.:\u200a194\u200a Altair is currently in the G-cloud\u2014a nearby interstellar cloud, an accumulation of gas and dust. \nAltair rotates rapidly, with a velocity at the equator of approximately 286 km/s. This is a significant fraction of the star's estimated breakup speed of 400 km/s. A study with the Palomar Testbed Interferometer revealed that Altair is not spherical, but is flattened at the poles due to its high rate of rotation. Other interferometric studies with multiple telescopes, operating in the infrared, have imaged and confirmed this phenomenon.",
@@ -368,7 +368,7 @@ export const wiki = {
 		summary:
 			"Gliese 229 (also written as Gl 229 or GJ 229) is a binary system composed of a red dwarf and the first brown dwarf seen by astronomers, 18.8 light years away in the constellation Lepus. The primary component has 58% of the mass of the Sun, 69% of the Sun's radius, and a very low projected rotation velocity of 1 km/s at the stellar equator.\nThe star is known to be a low activity flare star, which means it undergoes random increases in luminosity because of magnetic activity at the surface. The spectrum shows emission lines of calcium in the H and K bands. The emission of X-rays has been detected from the corona of this star. These may be caused by magnetic loops interacting with the gas of the star's outer atmosphere. No large-scale star spot activity has been detected.\nThe space velocity components of this star are U = +12, V = \u201311 and W = \u201312 km/s. The orbit of this star through the Milky Way galaxy has an eccentricity of 0.07 and an orbital inclination of 0.005.",
 	},
-	'Sigma Dra': {
+	'Sigma Draconis': {
 		title: 'Sigma Draconis',
 		summary:
 			'Sigma Draconis is a single star in the northern constellation of Draco. It has the proper name Alsafi , while Sigma Draconis, which is latinised from \u03c3 Draconis and abbreviated Sig Dra or \u03c3 Dra, is the Bayer designation. It has an apparent visual magnitude of 4.7, which is bright enough to be faintly visible to the naked eye. Based on parallax measurements, this star is located at a distance of 18.8 light years from the Sun. It is receding from the Sun with a radial velocity of 26.6 km/s.',
@@ -393,7 +393,7 @@ export const wiki = {
 		summary:
 			"Gliese 754 is a dim star in the southern constellation of Telescopium. It has an apparent visual magnitude of 12.25, which requires a telescope to view. The star is located at a distance of 19.3 light-years from the Sun based on parallax, and it is drifting further away with a radial velocity of +7 km/s. It is one of the hundred closest stars to the Solar System. Calculations of its orbit around the Milky Way showed that it is eccentric, and indicate that it might be a thick disk object.\nThe stellar classification of Gliese 754 is M4V, indicating that this is a small red dwarf star on the core hydrogen fusing main sequence. It has 17% of the mass of the Sun and 21% of the Sun's radius. The star is fully convective and is a source of X-ray emission. It is rotating slowly with a period of about 133 days. The metallicity is sub-solar, indicating it has a lower abundance of heavy elements compared to the Sun. It is radiating just 0.5% of the luminosity of the Sun from its photosphere at an effective temperature of around 3,202 K.",
 	},
-	'BR Psc': {
+	'BR Piscium': {
 		title: 'Gliese 908',
 		summary:
 			'Gliese 908 is a red dwarf star, located in constellation Pisces at 19.3 light-years from Earth.  It is a BY Draconis variable star with a variable star designation of BR Piscium.  Its apparent magnitude varies between magnitude 8.93 and magnitude 9.03 as a result of starspots and varying chromospheric activity.\nThe variability of Gliese 908 was confirmed in 1994, although no period could be detected in its brightness changes.  It was entered into the General Catalogue of Variable Stars in 1997.\nGliese 908 is a cool main sequence star, a red dwarf, with a spectral class of M1V Fe-1.  The suffix indicates a noticeable deficiency in heavy elements.\n\n\n== References ==',
@@ -423,7 +423,7 @@ export const wiki = {
 		summary:
 			'Furuhjelm 46, also known as HD 155876 and Gliese 661, is a nearby binary star system, consisting of two very similar red dwarfs, located in the constellation Hercules.\nThe star\'s duplicity was discovered by the Dutch astronomer Gerard Kuiper in 1934 in a systematic survey for duplicity of the known stars within about 25 parsecs from the Sun, carried out with the 36-inch telescope of the Lick Observatory. Furuhjelm 46 is the nearest "true" (i. e. not brown dwarf) star system in Hercules, however, there is brown dwarf in this constellation, located closer: WISE 1741+2553.',
 	},
-	'YZ Canis Minoris': {
+	'YZ CMi': {
 		title: 'YZ Canis Minoris',
 		summary:
 			"YZ Canis Minoris is a red-hued star in the equatorial constellation of Canis Minor. With an apparent visual magnitude of 11.15, it is much too faint to be viewed with the naked eye. The distance to YZ CMi can be estimated from its annual parallax shift of 167 mas, yielding a value of 19.5 light years. Presently the star is moving further away with a heliocentric radial velocity of +26.5 km/s. It made its closest approach some 162,000 years ago when it made perihelion passage at a distance of 10.2 ly. YZ CMi is a potential member of the Beta Pictoris moving group.\nThis is a red dwarf star, or M-type main-sequence star, with a stellar classification of M5 V. It is a flare star, so called due to its stellar flares being more powerful than those of Earth's star, and is roughly three times the size of Jupiter. The radio emission from the star is in a 50 mHz bandwidth and is centered on 1464.9 mHz. The X-ray surface flux is 2.73\u00d7106 erg s\u22121 cm\u22122. It has a coronal temperature of 5.79 MK.\n\n\n== References ==",
@@ -478,7 +478,7 @@ export const wiki = {
 		summary:
 			'G 240-72 (or WD 1748+708, or LHS 455, or GJ 1221) is a nearby degenerate star (white dwarf) of spectral class DQP9.0, located in constellation Draco.',
 	},
-	'HN Lib': {
+	'HN Librae': {
 		title: 'Gliese 555',
 		summary:
 			"Gliese 555 is a small star with one or more orbiting exoplanets in the constellation Libra. It has the variable star designation HN Librae, abbreviated HN Lib. With an apparent visual magnitude of 11.32, it can only be viewed through a telescope. The system is located at a distance of 20.4 light years based on parallax measurements, but is drifting closer to the Sun with a radial velocity of \u22121.4 km/s. It does not appear to belong to any known stellar moving group or association.\nThis is an M-type main-sequence star, a red dwarf, with a stellar classification of M4.0V. The chromosphere of this star is weakly active, causing starspots that vary the stellar luminosity as it rotates. It has 29% of the mass of the Sun and 30% of the Sun's girth. On average, the star is radiating just 1% of the luminosity of the Sun from its photosphere at an effective temperature of 3,347 K. The star is spinning slowly with a rotation period of around 96 days.",
@@ -488,7 +488,7 @@ export const wiki = {
 		summary:
 			'EQ Pegasi (also known as Gliese 896) is a nearby binary system of two red dwarfs.  Both components are flare stars, with spectral types of M4Ve and M6Ve respectively, and a current separation between the components of 5.8 arcseconds.  The system is at a distance of 20.4 light-years, and is 950 million years old. The primary star is orbited by one known exoplanet.',
 	},
-	'HO Lib': {
+	'HO Librae': {
 		title: 'Gliese 581',
 		summary:
 			'Gliese 581 () is a red dwarf star of spectral type M3V at the center of the Gliese 581 planetary system, about 20.5 light years away from Earth in the Libra constellation. Its estimated mass is about a third of that of the Sun, and it is the 101st closest known star system to the Sun. Gliese 581 is one of the oldest, least active M dwarfs known. Its low stellar activity improves the likelihood of its planets retaining significant atmospheres, and lessens the sterilizing impact of stellar flares.',
@@ -562,7 +562,7 @@ export const wiki = {
 		summary:
 			'Gliese 408 is a star located 22.0 light-years (6.7 parsecs) from the Solar System, located in the constellation of Leo. The stars nearest to Gliese 408 are Gliese 402, at 6.26 light years, and AD Leonis, at 6.26 light years.\nGliese 408 is a red dwarf with a spectral type of M2.5V. Much dimmer than the Sun, it has a luminosity of only 0.37% compared to the Sun, but still it is much more luminous than other red dwarf stars, like Proxima Centauri. Its effective temperature is about 3400 to 3500 K; its mass is about 41% compared to the Sun, and its radius is about 43% that of the Sun. Its rotational velocity is at most 2.3 km/s. No evidence of a circumstellar disk has been found around Gliese 408.\n\n\n== References ==',
 	},
-	'Xi Boo': {
+	'Xi Bo\u00f6tis': {
 		title: 'Xi Bo\u00f6tis',
 		summary:
 			'Xi Bo\u00f6tis, Latinised from \u03be Bo\u00f6tis, is a binary star system located at a distance of 22 light-years away from Earth. It is the nearest visible star in the constellation Bo\u00f6tes. The brighter, primary component of the pair has a visual magnitude of 4.70, making it visible to the naked eye.',
@@ -671,7 +671,7 @@ export const wiki = {
 		summary:
 			'GJ 3991 (also known as Gliese 3991 and G 203-47) is a binary star system located 24.2 light-years away in the constellation Hercules. It consists of a Red dwarf star with 20-30% the mass of the Sun, and a White dwarf star roughly 50% the mass of the sun. The two components orbit each other in a tight orbit only 0.11 astronomical units from each other, with an orbital period of only 14.71 days. Due to their small separation, the two objects have never been visually resolved and are merely predicted from the radial velocity changes of GJ 3991 A, making the system a spectroscopic binary.',
 	},
-	'Alpha PsA': {
+	'Alpha Piscis Austrini': {
 		title: 'Fomalhaut',
 		summary:
 			'Fomalhaut (UK: , US: ) is the brightest star in the southern constellation of Piscis Austrinus, the Southern Fish, and one of the brightest stars in the night sky. It has the Bayer designation Alpha Piscis Austrini, which is an alternative form of \u03b1 Piscis Austrini, and is abbreviated Alpha PsA or \u03b1 PsA. This is a class A star on the main sequence approximately 25 light-years (7.7 pc) from the Sun as measured by the Hipparcos astrometry satellite. Since 1943, the spectrum of this star has served as one of the stable anchor points by which other stars are classified.\nIt is classified as a Vega-like star that emits excess infrared radiation, indicating it is surrounded by a circumstellar disk. Fomalhaut, K-type main-sequence star TW Piscis Austrini, and M-type, red dwarf star LP 876-10 constitute a triple system, even though the companions are separated by approximately 8 degrees.\nFomalhaut was the first stellar system with an extrasolar planet candidate imaged at visible wavelengths, designated Fomalhaut b. However, analyses in 2019 and 2023 of existing and new observations indicate that Fomalhaut b is not a planet, but rather an expanding region of debris from a massive planetesimal collision.',
@@ -691,12 +691,12 @@ export const wiki = {
 		summary:
 			'WISEPA J173835.53+273258.9 (abbreviated WISE 1738+2732) is a brown dwarf of spectral class Y0, located in the constellation Hercules at 24.9 light-years from Earth.',
 	},
-	'107 Psc': {
+	'107 Piscium': {
 		title: '107 Piscium',
 		summary:
 			"107 Piscium  is a single star in the constellation of Pisces. 107 Piscium is the star's Flamsteed designation. John Flamsteed numbered the stars of Pisces from 1 to 113, publishing his Catalogus Britannicus in 1725. He accidentally numbered 107 Piscium twice, as he also allocated it the designation of 2 Arietis. This star is faintly visible to the naked eye with an apparent visual magnitude that has been measured varying between 5.14 and 5.26. However, that finding of variation was not confirmed by subsequent observations and is most likely spurious data. It is located at a distance of about 24.8 light years away from the Sun. 107 Piscium is drifting closer to the Sun with a radial velocity of \u221233.6, and is predicted to come as close as 15.4 light-years in around 135,800 years.\nThis object is a K-type main-sequence star with a stellar classification of K1V, indicating it is generating energy from core hydrogen fusion. It is somewhat older than the Sun\u2014approximately 6 billion years old. The star has 86% of the mass and 82% of the radius of the Sun, but shines with only 46% of the Sun's luminosity. The effective temperature of the star is 5,172 K. It is rotating slowly with a period of 35.0 d. The abundance of elements other than hydrogen and helium\u2014the star's metallicity\u2014is slightly lower than that of the Sun. The level of chromospheric activity is similar to the Sun, and it shows a simple cycle of variation.\n107 Piscium has been examined for the presence of an infrared excess caused by exozodiacal dust, but none was detected. The habitable zone for this star, defined as the locations where liquid water could be present on an Earth-like planet, is at a radius of 0.52\u20131.10 Astronomical Units (AU), where 1 AU is the average distance from the Earth to the Sun.\nIn 1997, based on data collected during the Hipparcos mission, the star was categorized as an astrometric binary with a period of 0.576 years. However, this result has not been not confirmed.",
 	},
-	'Alpha Lyr': {
+	'Alpha Lyrae': {
 		title: 'Vega',
 		summary:
 			'Vega is the brightest star in the northern constellation of Lyra. It has the Bayer designation \u03b1 Lyrae, which is Latinised to Alpha Lyrae and abbreviated Alpha Lyr or \u03b1 Lyr. This star is relatively close at only 25 light-years (7.7 parsecs) from the Sun, and one of the most luminous stars in the Sun\'s neighborhood. It is the fifth-brightest star in the night sky, and the second-brightest star in the northern celestial hemisphere, after Arcturus.\nVega has been extensively studied by astronomers, leading it to be termed "arguably the next most important star in the sky after the Sun". Vega was the northern pole star around 12,000 BCE and will be so again around the year 13,727, when its declination will be +86\u00b0 14\u2032. Vega was the first star other than the Sun to have its image and spectrum photographed. It was one of the first stars whose distance was estimated through parallax measurements. Vega has functioned as the baseline for calibrating the photometric brightness scale and was one of the stars used to define the zero point for the UBV photometric system.\nVega is only about a tenth of the age of the Sun, but since it is 2.1 times as massive, its expected lifetime is also one tenth of that of the Sun; both stars are at present approaching the midpoint of their main sequence lifetimes. Compared with the Sun, Vega has a lower abundance of elements heavier than helium. Vega is also a variable star\u2014that is, a star whose brightness fluctuates. It is rotating rapidly with a speed of 236 km/s at the equator. This causes the equator to bulge outward due to centrifugal effects, and, as a result, there is a variation of temperature across the star\'s photosphere that reaches a maximum at the poles. From Earth, Vega is observed from the direction of one of these poles.\nBased on observations of more infrared radiation than expected, Vega appears to have a circumstellar disk of dust. This dust is likely to be the result of collisions between objects in an orbiting debris disk, which is analogous to the Kuiper belt in the Solar System. Stars that display an infrared excess due to dust emission are termed Vega-like stars. In 2021, a candidate ultra-hot Neptune on a 2.43-day orbit around Vega was discovered with the radial velocity method, additionally, another possible Saturn-mass signal with a period of about 200 days.',
@@ -746,7 +746,7 @@ export const wiki = {
 		summary:
 			"GJ 1151 is a star located in the northern circumpolar constellation of Ursa Major at a distance of 26.2 light-years (8.0 parsecs) from the Sun. It has a reddish hue and is too faint to be visible to the naked eye with an apparent visual magnitude of 14.0 The star is moving closer with a radial velocity of \u221236 km/s, and has a relatively large proper motion, traversing the celestial sphere at a rate of 1.815\u2033\u00b7yr\u22121.\nThis is a small red dwarf star of spectral type dM4.5. It is 2.5 billion years old and is spinning with a projected rotational velocity of 2.0 km/s. The star has 15.4% of the mass of the Sun and 19.0% of the Sun's radius, with an effective temperature of 3,143 K.",
 	},
-	'Chi Dra': {
+	'Chi Draconis': {
 		title: 'Chi Draconis',
 		summary:
 			'Chi Draconis (\u03c7 Dra, \u03c7 Draconis, Chi Draconis) is a magnitude 3.6 binary star in the constellation Draco. It also has the Flamsteed designation 44 Draconis.  At a distance of 27 light years, it is one of the forty or so closest stars.',
@@ -790,7 +790,7 @@ export const wiki = {
 		summary:
 			'WD 2359-434 (Gliese 915, LHS 1005, L 362-81) is a nearby degenerate star (white dwarf) of spectral class DAP5.8, the single known component of the system, located in the constellation Phoenix, the nearest star in this constellation.',
 	},
-	'Mu Her': {
+	'Mu Herculis': {
 		title: 'Mu Herculis',
 		summary:
 			'Mu Herculis (\u03bc Herculis) is a nearby quadruple star system about 27.1 light years from Earth in the constellation Hercules.  Its main star, Mu Herculis A is fairly similar to the Sun although more highly evolved with a stellar classification of G5 IV. Since 1943, the spectrum of this star has served as one of the stable anchor points by which other stars are classified. Its mass is about 1.1 times that of the Sun, and it is beginning to expand to become a giant.',
@@ -835,12 +835,12 @@ export const wiki = {
 		summary:
 			"Gliese 877 (GJ 877 / HIP 113229 / LHS 531) is a red dwarf located in the southern constellation of Octans, near the boundary with Indus.\nGliese 877's bolometric luminosity is just 2.3% of the Sun's. It shines with an apparent magnitude of +10.22, so it cannot be seen with the naked eye. Nevertheless, it is considerably brighter than other red dwarfs, such as Proxima Centauri, the closest red dwarf to the Solar System; in particular, it is almost 14 times more luminous than Proxima. Of spectral type M3V, its effective temperature is 3390 K. It does not appear to be a variable star.\nGliese 877 is 28.1 light years from the Solar System. Known stars close to it are \u03b2 Hydri and \u03b6 Tucanae, respectively 4.5 and 6.2 light years.",
 	},
-	'Zeta Tuc': {
+	'Zeta Tucanae': {
 		title: 'Zeta Tucanae',
 		summary:
 			"Zeta Tucanae, Latinized from \u03b6 Tucanae, is a star in the constellation Tucana. It is a spectral class F9.5 main sequence star with an apparent magnitude of +4.23. Despite having a slightly lower mass, this star is more luminous than the Sun. Based upon parallax measurements by the Hipparcos spacecraft, it is approximately 28.0 light years from Earth. This is one of the least variable stars observed during the Hipparcos mission.\nThe composition and mass of this star are very similar to the Sun, with a slightly lower mass and an estimated age of three billion years. The solar-like qualities make it a target of interest for investigating the possible existence of a life-bearing planet.\nBased upon an excess emission of infrared radiation at 70 micrometres, this system is believed to have a debris disk. The disk is orbiting the star at a minimum radius of 2.3 astronomical units. It is radiating with a maximum temperature of 218 K. As of 2009, no planet has been discovered in orbit around this star.\nThe components of this star's space velocity are U = \u221260, V = \u22124 and W = \u221238 km/s. These correspond to the velocity toward the Galactic Center, the velocity along\nthe direction of galactic rotation, and the velocity toward the north galactic pole, respectively. It is orbiting through the galaxy at a mean distance of 8.4 kpc from the Galactic Center and with an orbital eccentricity of 0.16.",
 	},
-	'AP Col': {
+	'AP Columbae': {
 		title: 'AP Columbae',
 		summary:
 			'AP Columbae, also known as AP Col, is a pre-main-sequence star in the constellation of Columba, which has been studied for the last 15 years, but was recently discovered to be very young and close to Earth. It has been recognized as the closest young star to the Earth.',
@@ -850,10 +850,10 @@ export const wiki = {
 		summary:
 			"Chi1 Orionis (\u03c71 Ori, \u03c71 Orionis) is a star about 28 light years away. It is in the constellation Orion, where it can be seen in the tip of the hunter's upraised club.\n\n\u03c71 Ori is a G0V star. It is listed in the General Catalog of Variable Stars as an RS Canum Venaticorum variable, varying between visual magnitude 4.38 and 4.41. St\u0119pie\u0144 and Geyer measured its period to be 5.5 days.\n\u03c71 Ori has a faint companion with a mass estimated at about 15% of the mass of the Sun, and an orbital period of 14.1 years. The companion orbits an average distance of 6.1 AU from the primary, but has a fairly high orbital eccentricity, ranging from 3.3 AU out to 8.9 AU from the primary. Because of this red dwarf companion, the likelihood of habitable planets in this system is low.  It is thought that the companion is a red dwarf still contracting towards the main sequence.\nA necessary condition for the existence of a planet in this system are stable zones where the object can remain in orbit for long intervals. For hypothetical planets in a circular orbit around the individual members of this star system, this maximum orbital radius is computed to be 1.01 AU for the primary and 0.41 AU for the secondary. (Note that the orbit of the Earth is 1 AU from the Sun.) A planet orbiting outside of both stars would need to be at least 18.4 AU distant.\n\u03c71 Ori is a candidate stream star member of the Ursa Major Moving Group, although there is some evidence to the contrary.",
 	},
-	'Xi Canis Majoris': {
-		title: 'Xi Canis Majoris',
+	'Xi Ursae Majoris': {
+		title: 'Xi Ursae Majoris',
 		summary:
-			'The Bayer designation Xi Canis Majoris (\u03be CMa / \u03be Canis Majoris) is shared by two star systems, in the constellation Canis Major:\n\n\u03be\u00b9 Canis Majoris\n\u03be\u00b2 Canis Majoris\nThey are separated by 0.86\u00b0 on the sky.\n\u03be\u00b9 Canis Majoris was member of asterism \u8ecd\u5e02 (J\u016bn Sh\u00ec), Market for Soldiers, Well mansion. \u03be\u00b2 Canis Majoris was not any member of asterism.\n\n\n== References ==',
+			'Xi Ursae Majoris is a quintuple star system 28.5 light-years (8.7 parsecs) away in the constellation of Ursa Major. It has the traditional name Alula Australis; Xi Ursae Majoris is the Bayer designation, which is Latinised from \u03be Ursae Majoris and abbreviated Xi UMa or \u03be UMa.  It was the first visual double star for which an orbit was calculated, when it was computed by F\u00e9lix Savary in 1828. It is also a variable star with a small amplitude. Xi Ursae Majoris is found in the left hind paw of the Great Bear.',
 	},
 	'LSPM J0036+1821': {
 		title: '2MASS J00361617+1821104',
@@ -865,12 +865,12 @@ export const wiki = {
 		summary:
 			"HD 50281 is a star in the equatorial constellation of Monoceros. It is orange in hue with an apparent visual magnitude of 6.58, which lies at or below the typical limit of visibility to the naked eye. The star is located at a distance of 28.5 light years from the Sun based on parallax, but is drifting closer with a radial velocity of \u22127.2 km/s.\nThis object is an ordinary K-type main-sequence star with a stellar classification of K3.5 V. It is nearly two billion years old and is spinning with a projected rotational velocity of 5.5 km/s. The metallicity of this star \u2013 what astronomers term the abundance of elements with atomic numbers greater than helium \u2013 is near solar. The star has 79% of the mass of the Sun and 73% of the Sun's radius. It is radiating 22.5% of the luminosity of the Sun from its photosphere at an effective temperature of 4,712 K.\nA magnitude 10.16 common proper motion companion, designated component B, is located at an angular separation of 58.8\u2033 along a position angle of 181\u00b0 from the primary, as of 2015. This is a suspected binary star system with components of individual visual magnitude 10.6 and 11.1, and a class of M2.5 V. The coordinates of this companion are a source of X-ray emission. A third companion, magnitude 14.04 component C, lies at a separation of 9.6\u2033 from component B.",
 	},
-	'41 G. Arae': {
+	'41 Arae': {
 		title: '41 G. Arae',
 		summary:
 			"41 G. Arae (abbreviated to 41 G. Ara), also known as GJ 666, is a trinary star system in the constellation Ara 28.7 light-years (8.8 parsecs) from the Sun. Although often called just 41 Arae, it is more accurate to call it 41 G. Arae, as the number 41 is the Gould designation (Flamsteed only covered the northern hemisphere).\nThe primary star in this system is a G-type main sequence star with a stellar classification of G8V. It has about 81% of the mass of the Sun, and 79% of the Sun's radius. The fainter member of the pair, a red dwarf, has a peculiar spectrum that shows a deficiency in elements with a higher atomic number than Helium. No planetary companions have been detected in orbit around these stars.\nThe two stars share a highly elliptical orbit that takes several centuries to complete. The estimates of the period range from 693 to 2,200 years, and the average separation of the two stars is about 210 AU (or 210 times the average distance between the Earth and the Sun).\n41 G. Arae is most likely a triple, comprising the following components: Gliese 666A supposed as a spectroscopic binary, and Gliese 666B as its companion. Two other visual companions were proposed, but neither share the system's motion. Observations from Gaia have shown that it is in fact component B which is binary, with an orbital period of 88 days.\nThis system has a relatively high proper motion, moving over a second of arc across the sky each year. The space velocity components of this system are [U, V, W] = [+38, +30, \u221219] km/s. The stars in this system show low chromospheric activity, and have a net space velocity of 52 km/s relative to the Sun. This, in combination with their low metallicity, shows that the pair belongs to the old disk population.",
 	},
-	'HU Del': {
+	'HU Delphini': {
 		title: 'HU Delphini',
 		summary:
 			'HU Delphini, also known as Gliese 791.2, is a star system in the constellation of Delphinus. Its apparent magnitude is 13.07. With a trigonometric parallax of 113.4 \u00b1 0.2 mas, it is about 28.76 light-years (8.82 parsecs) away from the Solar System.\nHU Delphini is a binary star with a well-defined period of 538.6 days. The orbit has been derived from astrometry as well as through spectral observations, although that has been difficult because of the high projected rotational velocity. It is also fairly eccentric, at 0.558.\nBoth stars in the system are red dwarfs. The primary component of the system is only 23.7% as massive as the Sun, so it is fully convective. As a result, there are frequent starspots on its surface, especially near poles. While the normal surface temperature of the primary is 3000 K, the starspots themselves are cooler: only 2700 K. It is also a flare star, the first flare been detected in August 2000. The secondary star has a mass of 11.4% that of the Sun.',
@@ -895,7 +895,7 @@ export const wiki = {
 		summary:
 			'Ross 695, also known as Gliese 465, is a red dwarf star in the constellation Corvus. At apparent magnitude 11.27, it is much too faint to be seen with the unaided eye. A small star, it has around 23% the mass and radius of the Sun, but only 0.7% its luminosity. Investigation of its radial velocity failed to find any evidence of a planetary companion.\n\n\n== References ==',
 	},
-	'Gamma Lep': {
+	'Gamma Leporis': {
 		title: 'Gamma Leporis',
 		summary:
 			"Gamma Leporis, Latinized from \u03b3 Leporis, is a star in the south central part of the constellation Lepus, southeast of Beta Leporis and southwest of Delta Leporis. With an apparent visual magnitude of 3.587, it is bright enough to be seen with the naked eye. Based upon an annual parallax shift of 112.02 mas as seen from Earth, its distance can be estimated as 29 light years from the Sun. It has a common proper motion companion, AK Leporis, which is a variable star of the BY Draconis type and has an average brightness of magnitude 6.28. The two are 95\u2033 apart can be well seen in binoculars. Gamma Leporis is a member of the Ursa Major Moving Group.\nGamma Leporis is an F-type main-sequence star with a stellar classification of F6 V. It is larger than the Sun with 1.2 times the radius of the Sun and 1.3 times the Sun's mass. The star is around 1.3 billion years old and is spinning with a rotation period of about six days. Based upon its stellar characteristics and distance from Earth, Gamma Leporis was considered a high-priority target for NASA's Terrestrial Planet Finder mission. It has been examined for an infrared excess, but none has been observed.",
@@ -925,7 +925,11 @@ export const wiki = {
 		summary:
 			'2MASS J03552337+1133437 (2MASS J0355+11) is a nearby brown dwarf of spectral type L5\u03b3, located in constellation Taurus at approximately 29.8 light-years from Earth.',
 	},
-	'Beta Com': {
+	'CF Ursae Majoris': {
+		title: 'Groombridge 1830',
+		summary: "Groombridge 1830 (also known as 1830 Groombridge or  Argelander's Star) is a star in the constellation Ursa Major.",
+	},
+	'Beta Comae Berenices': {
 		title: 'Beta Comae Berenices',
 		summary:
 			'Beta Comae Berenices (\u03b2 Comae Berenices, \u03b2 Com) is a main sequence dwarf star in the northern constellation of Coma Berenices. It is located at a distance of about 29.95 light-years (9.18 parsecs) from Earth. The Greek letter beta (\u03b2) usually indicates that the star has the second highest visual magnitude in the constellation. However, with an apparent visual magnitude of 4.3, this star is actually slightly brighter than \u03b1 Comae Berenices. It can be seen with the naked eye, but may be too dim to be viewed from a built-up urban area.\nThe star is similar to the Sun, being only slightly larger and brighter in absolute magnitude. It has a stellar classification of G0 V, compared to G2 V for the Sun. The effective temperature of the outer envelope is 5,936 K, giving it a yellow hue of a G-type star. In terms of age it is younger than the Sun, being about 3 billion years old.\nObservations of short term variations in the chromatic activity suggest that the star undergoes differential rotation, with a rotation period of about 11\u201313 days. Its surface has a measured activity cycle of 16.6 years, compared to 11 years on the Sun. It may also have a secondary activity cycle of 9.6 years. At one time it was thought that this star might have a spectroscopic companion. However, this was ruled out by means of more accurate radial velocity measurements. No planets have yet been detected around it, and there is no evidence of a dusty disk.\nThe habitable zone for this star, defined as the locations where liquid water could be present on an Earth-like planet, is 0.918\u20131.96 AU, where 1 AU is the average distance from the Earth to the Sun.',
@@ -975,7 +979,7 @@ export const wiki = {
 		summary:
 			"GJ 3512 is a nearby star in the northern circumpolar constellation of Ursa Major. It is invisible to the naked eye but can be observed using a telescope, having an apparent visual magnitude of +15.05. The star is located at a distance of 31 light-years from the Sun based on parallax. It has a high proper motion, traversing the celestial sphere at the rate of 1.311\u2033 yr\u22121. The measurement of the star's radial velocity is poorly constrained, but it appears to be drifting further away at a rate of ~8 km/s.\nThe stellar classification of GJ 3512 is dM5.5, which determines this to be a small red dwarf star that is generating energy through core hydrogen fusion. It displays a moderate amount of magnetic activity with a Sun-like cycle lasting 14 years. A low-level variability lasting ~87 d matches the approximate rotation period. The star has 12.5% of the mass of the Sun and 16% of the Sun's radius. It is radiating 1.6% of the luminosity of the Sun from its photosphere at an effective temperature of 3,081 K.",
 	},
-	'20 Crt': {
+	'20 Crateris': {
 		title: 'HR 4458',
 		summary:
 			"HR 4458 is a binary star system in the equatorial constellation of Hydra. It has the Gould designation 289 G. Hydrae; HR 4458 is the Bright Star Catalogue designation. At a distance of 31.13 light years, it is the closest star system to the Solar System within this constellation. This object is visible to the naked eye as a dim, orange-hued star with an apparent visual magnitude of 5.97. It is moving closer to the Earth with a heliocentric radial velocity of \u221222 km/s.\nThe primary component is K-type main-sequence star with a stellar classification of K0 V. It is around five billion years old with 84% of the Sun's radius. The star is radiating 37% of the Sun's luminosity from its photosphere at an effective temperature of 5,241 K. It has been examined for the presence of an infrared excess, but none was detected.\nThere is a common proper motion companion at an angular separation of 16.2\u2033, corresponding to a projected separation of 162.5 AU. This is a white dwarf star with a classification of DC8. The orbital period of the pair is estimated as 1,110 years.",
@@ -985,12 +989,17 @@ export const wiki = {
 		summary:
 			'Wolf 1069 is a red dwarf star located 31.2 light-years (9.6 parsecs) away from the Solar System in the constellation of Cygnus. The star has 17% the mass and 18% the radius of the Sun, a temperature of 3,158 K (2,885 \u00b0C; 5,225 \u00b0F), and a slow rotation period of 150\u2013170 days. It hosts one known exoplanet called Wolf 1069 b which could possibly sustain life.',
 	},
+	'61 Ursae Majoris': {
+		title: '61 Ursae Majoris',
+		summary:
+			"61 Ursae Majoris, abbreviated 61 UMa, is a single star in the northern circumpolar constellation of Ursa Major. It has a yellow-orange hue and is dimly visible to the naked eye with an apparent visual magnitude of 5.35. The distance to this star is 31.2 light years based on parallax, and it is drifting closer with a radial velocity of \u22125.2 km/s. The star has a relatively high proper motion traversing the sky at the rate of 0.381\u2033 yr\u22121.\nThe stellar classification of 61 UMa is G8V, matching a late G-type main-sequence star. Since 1943, the spectrum of this star has served as one of the stable anchor points by which other stars are classified. It is considered a solar-type star, having physical properties that make it similar to the Sun. The star has 93% of the mass of the Sun and 86% of the Sun's radius. It is roughly two billion years old and is spinning with a projected rotational velocity of 3.3 km/s, for a period of 17.1 days. The metallicity, or abundance of elements with higher atomic number than helium, appears about the same as in the Sun. The star is radiating 61% of the luminosity of the Sun from its photosphere at an effective temperature of 5,488K.\nDuring the 1950s, Karl Pilowski reported that photographic plates taken of the star appeared to show a variability of 0.2 in magnitude. Follow-up studies initially failed to confirm this variability, and it was found not to be an eclipsing binary based on radial velocity measurements. The star's photosphere is rotating differentially, and the rotation period, typically in the range of 16-18 days, shows a larger difference between different latitudes than for most other stars. It has an active chromosphere that exhibits strong and persistent starspot activity. A flare event was captured in 2013 while the star was being observed by the VATT, and the star has been detected as a source of X-ray emission.\nNo substellar companions have been observed in orbit around this star, and it appears to lack a dust ring as is found around some comparable stars. A radial velocity survey completed in 2020 has indicated that giant planetary companions are absent. A magnitude 11.35 stellar visual companion was reported by O. Struve in 1850. As of 2015, this star was located at an angular separation of 158.90\u2033 from the brighter star, along a position angle of 86\u00b0.",
+	},
 	'CFBDS J005910-011401': {
 		title: 'CFBDS J005910.90\u2013011401.3',
 		summary:
 			'CFBDS J005910.90\u2212011401.3 (also CFBDS J0059\u22120114 or CFBDS0059) is a brown dwarf with a low temperature of only 625 K, located in constellation Cetus about 30 light-years away.\n\n\n== References ==',
 	},
-	'AT Mic': {
+	'AT Microscopii': {
 		title: 'AT Microscopii',
 		summary:
 			'AT Microscopii is a binary star system located at a distance of 35 ly (11 pc) from the Sun in the constellation of Microscopium. Both members are flare stars, meaning they are red dwarf stars that undergo random eruptions that increase their brightness. This pair lies physically near the red dwarf star AU Microscopii, which may mean they form a wide triple star system.',

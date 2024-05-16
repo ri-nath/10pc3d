@@ -9,52 +9,74 @@ import { wiki } from './10_pc_wiki'
 
 const BASE_GLOW = 0.4
 const BASE_RADIUS = 0.06
+const SOLAR_RADIUS = 3
 const class_map = {
     'O': {
         color: 0xA6BBF6,
         glow: 16 * BASE_GLOW,
-        draw_radius: 4 * BASE_RADIUS
+        draw_radius: 2 * BASE_RADIUS,
+        radius: 8.0 * SOLAR_RADIUS,
     },
     'B': {
         color: 0xA6BBF6,
         glow: 8 * BASE_GLOW,
-        draw_radius: 3 * BASE_RADIUS,
+        draw_radius: 2 * BASE_RADIUS,
+        radius: 4.0 * SOLAR_RADIUS,
     },
     'A': {
         color: 0xA6BBF6,
-        glow: 4 * BASE_GLOW,
-        draw_radius: 2 * BASE_RADIUS
+        glow: 5 * BASE_GLOW,
+        draw_radius: 1.5 * BASE_RADIUS,
+        radius: 1.6 * SOLAR_RADIUS,
     },
     'F': {
         color: 0xf8f7ff,
         glow: 2 * BASE_GLOW,
         draw_radius: 1 * BASE_RADIUS,
+        radius: 1.25 * SOLAR_RADIUS,
     },
     'G': {
-        color: 0xf8f7ff,
+        color: 0xEFE09F,
         glow: 1 * BASE_GLOW,
-        draw_radius: 1 * BASE_RADIUS
+        draw_radius: 1 * BASE_RADIUS,
+        radius: 1.0 * SOLAR_RADIUS
     },
     'K': {
         color: 0xffd2a1,
         glow: 0.8 * BASE_GLOW,
         draw_radius: 0.8 * BASE_RADIUS,
+        radius: 0.8 * SOLAR_RADIUS,
     },
     'M': {
         color: 0xF47939,
         glow: 0.3 * BASE_GLOW,
         draw_radius: 0.5 * BASE_RADIUS,
+        radius: 0.5 * SOLAR_RADIUS,
     },
     'WHITE_DWARF': {
         color: 0xFFFFFF,
         glow: 0.2 * BASE_GLOW,
         draw_radius: 0.4 * BASE_RADIUS,
+        radius: 0.02 * SOLAR_RADIUS,
+
     },
     'BROWN_DWARF': {
         color: 0x851C05,
         glow: 0,
-        draw_radius: 0.5 * BASE_RADIUS,
+        draw_radius: 0.4 * BASE_RADIUS,
+        radius: 0.1 * SOLAR_RADIUS,
     },
+}
+
+export function getType(object) {
+    const parsed_spectral_type = object.spectral_type && object.spectral_type.replace(/(>|=|sd|\s)/g, '')[0]
+    if (parsed_spectral_type && Object.keys(class_map).includes(parsed_spectral_type)) {
+        return parsed_spectral_type
+    }
+    if (['WD', 'D'].includes(object.cat.replace('?', ''))) {
+        return 'WHITE_DWARF'
+    }
+    return 'BROWN_DWARF'
 }
 
 export class Star {
@@ -65,18 +87,17 @@ export class Star {
     }
 
     getSystemType() {
-        const spectral_types = Object.values(this.star.objs).filter(s => s.spectral_type).map(s => s.spectral_type.replace(/(>|=|sd|\s)/g, '')[0]);
-        const categories = Object.values(this.star.objs).map(s => s.cat.replace('?', ''));
+        const types = Object.values(this.star.objs).map(getType)
 
-        const most_luminous_spectral_type = Object.keys(class_map).find(c => spectral_types.some(type => type.includes(c)))
+        const most_luminous_spectral_type = Object.keys(class_map).find(c => types.includes(c))
         if (most_luminous_spectral_type != undefined)
             return most_luminous_spectral_type
-
-        const is_white_dwarf = categories.some(cat => ['WD', 'D'].includes(cat))
-        return is_white_dwarf ? 'WHITE_DWARF' : 'BROWN_DWARF'
     }
 
     describeSystem() {
+        const br = '<br>'
+        const double_br = '<br><br>'
+
         const type_map = {
             'LM': 'low-mass star',
             'BD': 'brown dwarf',
@@ -84,44 +105,58 @@ export class Star {
             'WD': 'white dwarf',
         };
 
-        let desc = `<strong>${this.star.name}</strong><br>distance: ${Math.sqrt(this.star.x ** 2 + this.star.y ** 2 + this.star.z ** 2).toFixed(2)} pc`;
-        desc += `<br><br>This system consists of the following bodies:<small><br>`
-        for (let j in this.star.objs) {
-            const obj = this.star.objs[j];
-            if (obj.cat.includes('Planet')) continue
+        const name = [`<strong>${this.star.name}</strong>`, this.star.id && this.star.id != this.star.name ? ` (${this.star.id})` : ''].join('')
+        let d = Math.sqrt(this.star.x ** 2 + this.star.y ** 2 + this.star.z ** 2)
+        const distance = `distance: ${d.toFixed(2)} pc (${(d * 3.261598).toFixed(2)} light years)`
 
+        const intro = [name, br, '<small>', distance, '</small>'].join('')
+
+        const format_obj = (obj => {
             let type = obj.spectral_type ? obj.spectral_type + '-class ' : ''
             type += type_map[obj.cat.replace('?', '')]
 
             const [mantissa, power] = ('' + obj.luminosity.toExponential(1)).split('e')
 
-            let luminosity = ''
-            if (obj.luminosity > 1){
-                luminosity = obj.luminosity.toFixed(1)
-            }else {
-                luminosity = mantissa
-                if (power != 0)
-                    luminosity += ` × 10<sup>${power}</sup>`
+            let luminosity = obj.luminosity > 1 ? obj.luminosity.toFixed(1) : mantissa
+            if (power != 0) {
+                luminosity += ` × 10<sup>${power}</sup>`
             }
 
+            const obj_type = getType(obj)
+            const dot_radius = class_map[obj_type].radius * 25
+            const obj_color = class_map[obj_type].color.toString(16)
+            const dot_style = `height: ${dot_radius}px; width: ${dot_radius}px;` +
+                `background-color: #${obj_color};` +
+                `border-radius: 50%; display: flex;` +
+                `justify-content: center; align-items: center;` +
+                `color: black; text-align: center;`
 
-            desc +=
-                `<strong>${obj.name.replace('alf', 'α')}</strong>` +
-                '<br>class: ' + type +
+            const dot = obj_type.includes('DWARF') || obj_type == 'M'
+                ? `<span style="margin: 10px; ${dot_style}"></span>${obj.name}`
+                : `<span style="${dot_style}">${obj.name}</span>`
+
+            return `<tr><td style="font-size: small; width: 50%;"><strong>${obj.name}</strong>` +
+                `<br>class: <span style="color: black; background-color: #${obj_color}">${type}</span>` +
                 (obj.luminosity ? `<br>est. luminosity: ${luminosity} L☉` : '') +
-                '<br><br>';
-        }
+                `</td><td style="font-size: xx-small; align-items: center; display: flex; justify-content: center; flex-direction: column;">${dot}</td></tr>`
+        })
+
+        const objs = ['<table style="width: 100%;">', ...Object.values(this.star.objs)
+                .filter(obj => !obj.cat.includes('Planet'))
+                .map(format_obj), '</table>']
+                .join('')
 
         const wiki_entry = wiki[this.star.name]
+        let desc = ''
         if (wiki_entry) {
             let summary = wiki_entry.summary.replace(/\n/g, '<br><br>')
             desc += `</small><a href=https://en.wikipedia.org/wiki/${wiki_entry.title.replace(/\s/g, '_')}>` + wiki_entry.title + '</a> <small>(Courtesy of Wikipedia)'
             desc += '<br>' + summary + '</small>'
         } else {
-            desc += '</small>This minor system does not have a Wikipedia page assosciated with it.'
+            desc += '</small>This system does not have a Wikipedia page assosciated with it.'
         }
 
-        return desc
+        return [intro, objs, desc].join(br)
     }
 
     getSystemDrawColor() {
