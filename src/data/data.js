@@ -15,8 +15,6 @@ export class Star {
     }
 
     getSystemType() {
-        console.log(this)
-
         const spectral_types = Object.values(this.star.objs).filter(s => s.spectral_type).map(s => s.spectral_type.replace(/(>|=|sd|\s)/g, '')[0]);
         const categories = Object.values(this.star.objs).map(s => s.cat.replace('?', ''));
         const primary_type = spectral_types.some(type => ['O', 'B', 'A'].includes(type)) ? 'O_B_A'
@@ -140,7 +138,10 @@ export const DEFAULT_INFO = 'Click and drag to rotate.<br>Scroll to zoom.<br><st
 '<br><br>If you\'re lost, try looking for us (the Solar System).' +
 '<br>Also, try clicking on <strong>blue</strong> stars. The blue stars are all very luminous;' +
 'they can all be seen in the night sky, so they may belong to constellations that you\'re familiar with.' +
-'<br><br>Project by Rishi Nath.<br>Source: <a href="https://gruze.org/10pc/resources/">The 10 parsec sample in the Gaia era</a>' +
+'<br><br>Project by Rishi Nath.<br>' +
+'<br>Data source: <a href="https://gruze.org/10pc/resources/">The 10 parsec sample in the Gaia era</a>' +
 '<br>C. Reylé, K. Jardine, P. Fouqué, J. A. Caballero, R. L. Smart, A. Sozzetti' +
 '<br>A&A 650 A201 (2021)' +
-'<br>DOI: 10.1051/0004-6361/202140985'
+'<br>DOI: 10.1051/0004-6361/202140985' +
+'<br><br>Lens flare sprite (star.png) courtesy of <a href="https://ps-editors.blogspot.com/2012/02/glowing-stars-png.html">Mohammad Ahsan</a>, 2012.' +
+'<br>Glow sprite (glow.png) courtesy of <a href="http://stemkoski.github.io/Three.js/">Lee Stemkoski</a>, 2013.'
