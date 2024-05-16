@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 import * as data from './data/data';
 import * as shapes from './shapes/shapes';
-import * as handle from './camera/camera';
+import { Handle } from './camera/camera';
 
 // Create a WebGL renderer and set its size to the window dimensions
 const renderer = new THREE.WebGLRenderer();
@@ -52,13 +52,15 @@ scene.add(highlight);
 const infoBox = document.getElementById('info-text');
 infoBox.innerHTML = data.DEFAULT_INFO
 
+const handle = new Handle(camera, controls)
+
 // Animation loop to continuously update the controls and render the scene
 function animate() {
     requestAnimationFrame(animate);
     controls.update();
     renderer.render(scene, camera);
 
-    handle.updateCamera(camera, controls);
+    handle.update();
 }
 animate();
 
@@ -108,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result != undefined) {
         const obj = stars[result]
         selectObject(obj)
-        handle.setTarget(obj, camera, controls)
+        handle.target(obj)
       }
     }
 
@@ -137,6 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const randomIndex = Math.floor(Math.random() * stars.length);
       const randomStar = stars[data.keys()[randomIndex]];
       selectObject(randomStar)
-      handle.setTarget(randomStar, camera, controls)
+      handle.target(randomStar)
     })
   });

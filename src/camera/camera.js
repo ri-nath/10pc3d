@@ -1,34 +1,38 @@
 import * as THREE from 'three';
 
-let isCameraMoving = false
-let isCameraRetreating = false
-let target = new THREE.Vector3(0, 0, 0)
-export function updateCamera(camera, controls, lerp_alpha=0.01, pos_cutoff=10) {
-    if (!(isCameraMoving && target)) return;
+export class Handle {
+    constructor(camera, controls) {
+        this.camera = camera
+        this.controls = controls
+        this.reset()
+        this.isRetreating = false
+    }
 
-    let current_target = isCameraRetreating ? new THREE.Vector3(0, 20, 30) : target
-    camera.position.lerp(current_target, lerp_alpha);
-
-    const pos_diff = camera.position.distanceTo(current_target)
-    if (pos_diff < pos_cutoff) {
-        if (isCameraRetreating) {
-            isCameraRetreating = false
-            controls.target = target
-            controls.update()
-
+    update(lerp_alpha = 0.01, controls_cutoff = 1e-3, camera_cutoff = 10) {
+        const controls_diff = this.controls.target.distanceTo(this.controls_target)
+        if (controls_diff > controls_cutoff) {
+            this.controls.target.lerp(this.controls_target, lerp_alpha * 3)
         } else {
-            isCameraMoving = false;
+            this.controls.target = this.controls_target
+        }
+
+        const camera_target = this.isRetreating ? new THREE.Vector3(0, 20, 30) : this.camera_target
+        const camera_diff = this.camera.position.distanceTo(camera_target)
+        if (camera_diff > camera_cutoff) {
+            this.camera.position.lerp(camera_target, lerp_alpha);
+        } else {
+            this.isRetreating = false
         }
     }
-}
 
-export function setTarget(t, camera, controls) {
-    isCameraMoving = true
-    isCameraRetreating = true
-    target = t.position.clone()
-}
+    target(controls_target, camera_target=false) {
+        this.isRetreating = true
+        this.controls_target = controls_target.position.clone()
+        this.camera_target = camera_target ? camera_target.position.clone() : controls_target.position.clone()
+    }
 
-export function reset() {
-    isCameraMoving = false
-    target = new THREE.Vector3(0, 0, 0)
+    reset() {
+        this.controls_target = new THREE.Vector3(0, 0, 0)
+        this.camera_target = new THREE.Vector3(0, 20, 30)
+    }
 }
