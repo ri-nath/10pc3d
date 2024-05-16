@@ -1,4 +1,4 @@
-/**
+/**console.l
  * This file acts as the layer between the data and the rest of the project.
  * It provides an interface to interact with the data layer and abstracts away the implementation details.
  * This helps in decoupling the data layer from the rest of the project, making it easier to maintain.
@@ -6,6 +6,56 @@
 
 import { sample } from './10_pc_sample';
 import { wiki } from './10_pc_wiki'
+
+const BASE_GLOW = 0.4
+const BASE_RADIUS = 0.05
+const class_map = {
+    'O': {
+        color: 0xA6BBF6,
+        glow: 16 * BASE_GLOW,
+        draw_radius: 4 * BASE_RADIUS
+    },
+    'B': {
+        color: 0xA6BBF6,
+        glow: 8 * BASE_GLOW,
+        draw_radius: 3 * BASE_RADIUS,
+    },
+    'A': {
+        color: 0xA6BBF6,
+        glow: 4 * BASE_GLOW,
+        draw_radius: 2 * BASE_RADIUS
+    },
+    'F': {
+        color: 0xf8f7ff,
+        glow: 2 * BASE_GLOW,
+        draw_radius: 1 * BASE_RADIUS,
+    },
+    'G': {
+        color: 0xf8f7ff,
+        glow: 1 * BASE_GLOW,
+        draw_radius: 1 * BASE_RADIUS
+    },
+    'K': {
+        color: 0xffd2a1,
+        glow: 0.8 * BASE_GLOW,
+        draw_radius: 0.8 * BASE_RADIUS,
+    },
+    'M': {
+        color: 0xffd2a1,
+        glow: 0.5 * BASE_GLOW,
+        draw_radius: 0.8 * BASE_RADIUS,
+    },
+    'WHITE_DWARF': {
+        color: 0xFFFFFF,
+        glow: 0.2 * BASE_GLOW,
+        draw_radius: 0.4 * BASE_RADIUS,
+    },
+    'BROWN_DWARF': {
+        color: 0x851C05,
+        glow: 0,
+        draw_radius: 0.4 * BASE_RADIUS,
+    },
+}
 
 export class Star {
     constructor(index) {
@@ -17,12 +67,13 @@ export class Star {
     getSystemType() {
         const spectral_types = Object.values(this.star.objs).filter(s => s.spectral_type).map(s => s.spectral_type.replace(/(>|=|sd|\s)/g, '')[0]);
         const categories = Object.values(this.star.objs).map(s => s.cat.replace('?', ''));
-        const primary_type = spectral_types.some(type => ['O', 'B', 'A'].includes(type)) ? 'O_B_A'
-        : spectral_types.some(type => ['F', 'G'].includes(type)) ? 'F_G'
-        : spectral_types.some(type => ['K', 'M'].includes(type)) ? 'K_M'
-        : categories.some(cat => ['WD', 'D'].includes(cat)) ? 'WHITE_DWARF'
-        : 'BROWN_DWARF'
-        return primary_type
+
+        const most_luminous_spectral_type = Object.keys(class_map).find(c => spectral_types.some(type => type.includes(c)))
+        if (most_luminous_spectral_type != undefined)
+            return most_luminous_spectral_type
+
+        const is_white_dwarf = categories.some(cat => ['WD', 'D'].includes(cat))
+        return is_white_dwarf ? 'WHITE_DWARF' : 'BROWN_DWARF'
     }
 
     describeSystem() {
@@ -33,8 +84,7 @@ export class Star {
             'WD': 'white dwarf',
         };
 
-
-        let desc = `<strong>${this.star.name.replace('alf', 'α')}</strong><br>distance: ${Math.sqrt(this.star.x ** 2 + this.star.y ** 2 + this.star.z ** 2).toFixed(2)} pc`;
+        let desc = `<strong>${this.star.name}</strong><br>distance: ${Math.sqrt(this.star.x ** 2 + this.star.y ** 2 + this.star.z ** 2).toFixed(2)} pc`;
         desc += `<br><br>This system consists of the following bodies:<small><br>`
         for (let j in this.star.objs) {
             const obj = this.star.objs[j];
@@ -75,26 +125,15 @@ export class Star {
     }
 
     getSystemDrawColor() {
-        const color_map = {
-            O_B_A: 0xA6BBF6,
-            F_G: 0xf8f7ff,
-            K_M: 0xffd2a1,
-            WHITE_DWARF: 0xFFFFFF,
-            BROWN_DWARF: 0x66323D,
-        }
-
-        return color_map[this.systemType]
+        return class_map[this.systemType].color
     }
 
     getSystemDrawRadius() {
-        return this.systemType.includes('DWARF') ? 0.025 : 0.04
+        return class_map[this.systemType].draw_radius
     }
 
     getSystemDrawGlowAmnt() {
-        if (this.systemType == 'O_B_A') return 1.5
-        if (this.systemType == 'F_G') return 0.5
-        if (this.systemType == 'BROWN_DWARF') return 0
-        return 0.2
+        return class_map[this.systemType].glow
     }
 
     getSystemDrawCoordinates() {
