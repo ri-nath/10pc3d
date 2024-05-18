@@ -145,9 +145,9 @@ def star_to_obj(sys_dict, item):
 
     # Distance and x,y,z estimation
     distance = 1e3 / item['PARALLAX']
-    alpha, delta = item['RA'], item['DEC']
-    x = distance * np.cos(delta) * np.cos(alpha)
-    y = distance * np.cos(delta) * np.sin(alpha)
+    alpha, delta = np.deg2rad(item['RA']), np.deg2rad(item['DEC'])
+    x = distance * np.cos(alpha) * np.cos(delta)
+    y = distance * np.sin(alpha) * np.cos(delta)
     z = distance * np.sin(delta)
 
     if nb_sys not in sys_dict:
@@ -195,7 +195,7 @@ sys_dict['0'] = {
 with open('data/10pc_sample.json', 'w') as fp:
     json.dump(sys_dict, fp)
 
-do_dl_wiki = True
+do_dl_wiki = False
 wiki = {}
 if do_dl_wiki:
     for i in sys_dict.keys():
