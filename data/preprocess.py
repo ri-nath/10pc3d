@@ -67,6 +67,8 @@ def parse_greek(name):
         'Cet': 'Ceti',
         'Cha': 'Chamaeleontis',
         'Cir': 'Circini',
+        'CMa': 'Canis Majoris',
+        'CMi': 'Canis Minoris',
         'Col': 'Columbae',
         'Com': 'Comae Berenices',
         'CrA': 'Coronae Australis',

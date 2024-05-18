@@ -149,7 +149,10 @@ export class Star {
         const wiki_entry = wiki[this.star.name]
         let desc = ''
         if (wiki_entry) {
-            let summary = wiki_entry.summary.replace(/\n/g, '<br><br>').replace('== References ==', '').trim()
+            let summary = wiki_entry.summary
+                .replace(/\n/g, '<br><br>')
+                .replace(/\s+\(\)\s+/g, ' ')
+                .replace('== References ==', '').trim()
             desc += `</small><a href=https://en.wikipedia.org/wiki/${wiki_entry.title.replace(/\s/g, '_')}>` + wiki_entry.title + '</a> <small>(Courtesy of Wikipedia, 2024)'
             desc += '<br>' + summary + '</small>'
         } else {

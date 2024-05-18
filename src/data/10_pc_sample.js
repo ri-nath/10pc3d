@@ -69,13 +69,13 @@ export const sample = {
 	},
 	7: {
 		id: 'alf CMa',
-		name: 'Alpha CMa',
+		name: 'Alpha Canis Majoris',
 		x: -0.494330921710593,
 		y: 2.4767741588973884,
 		z: -0.7584977185360738,
 		objs: {
-			13: { id: 'alf CMa A', name: 'Alpha CMa A', cat: '*', spectral_type: 'A1', luminosity: 30.636590885991094 },
-			14: { id: 'alf CMa B', name: 'Alpha CMa B', cat: 'WD', spectral_type: 'DA1.9', luminosity: 0.0031007539377637537 },
+			13: { id: 'alf CMa A', name: 'Alpha Canis Majoris A', cat: '*', spectral_type: 'A1', luminosity: 30.636590885991094 },
+			14: { id: 'alf CMa B', name: 'Alpha Canis Majoris B', cat: 'WD', spectral_type: 'DA1.9', luminosity: 0.0031007539377637537 },
 		},
 	},
 	8: {
@@ -164,13 +164,13 @@ export const sample = {
 	},
 	16: {
 		id: 'alf CMi',
-		name: 'Alpha CMi',
+		name: 'Alpha Canis Minoris',
 		x: -1.4693260722975976,
 		y: 3.176200034500771,
 		z: 0.32002703061445553,
 		objs: {
-			31: { id: 'alf CMi A', name: 'Alpha CMi A', cat: '*', spectral_type: 'F5.0', luminosity: 4.916457572008262 },
-			32: { id: 'alf CMi B', name: 'Alpha CMi B', cat: 'WD', spectral_type: 'DQZ', luminosity: 0.0007106443305765698 },
+			31: { id: 'alf CMi A', name: 'Alpha Canis Minoris A', cat: '*', spectral_type: 'F5.0', luminosity: 4.916457572008262 },
+			32: { id: 'alf CMi B', name: 'Alpha Canis Minoris B', cat: 'WD', spectral_type: 'DQZ', luminosity: 0.0007106443305765698 },
 		},
 	},
 	17: {
@@ -962,11 +962,11 @@ export const sample = {
 	},
 	87: {
 		id: 'YZ CMi',
-		name: 'YZ CMi',
+		name: 'YZ Canis Minoris',
 		x: -2.635839926405017,
 		y: 5.364806766973418,
 		z: 0.3708776084586039,
-		objs: { 162: { id: 'YZ CMi', name: 'YZ CMi', cat: 'LM', spectral_type: 'M4e', luminosity: 0.005318691861861167 } },
+		objs: { 162: { id: 'YZ CMi', name: 'YZ Canis Minoris', cat: 'LM', spectral_type: 'M4e', luminosity: 0.005318691861861167 } },
 	},
 	88: {
 		id: 'WISE J154151.65-225024.9',
